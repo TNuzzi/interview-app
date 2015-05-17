@@ -60,3 +60,5 @@ A quick and easy way to find coffee shops around at my current location.
 
 Here is a rough UI Wireframe of how the app will look and navigation flow.
 
+
+![UI Wireframe](https://raw.githubusercontent.com/TNuzzi/interview-app/master/images/wireframe.png)
