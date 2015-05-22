@@ -83,10 +83,23 @@ A quick and easy way to find coffee shops around at my current location.
 
 Here is a rough UI Wireframe of how the app will look and navigation flow.
 
+**(Version 1)**<br />
+![Version 1 - UI Wireframe](https://raw.githubusercontent.com/TNuzzi/interview-app/master/images/wireframe.png)
 
-![UI Wireframe](https://raw.githubusercontent.com/TNuzzi/interview-app/master/images/wireframe.png)
+
+**(Version 2)**<br />
+![Version 2 - UI Wireframe](https://raw.githubusercontent.com/TNuzzi/interview-app/master/images/wireframe-v2.png)
+
 
 ### Design discussion ###
-Here is a short video about my thoughts around the v1 design:
+#### Here is a short video about my thoughts around the v1 design: ####
 
 [![Design V1 video](http://img.youtube.com/vi/jrjm1C8bOQ8/0.jpg)](http://www.youtube.com/watch?v=jrjm1C8bOQ8)
+
+#### Here is another video about why I changed the design (v2): ####
+
+#### Reason's for the redesign ####
+Understand app design is as important is coding.  For this app, I started down the path with my first design and soon realized it may not be the best design for future functionality.  Meaning, I had visually designed it to be 2 seperate views in a single UIViewController.  If I wanted to expand the on the functionality of either view I had to manage the state of which view (map or list) was being shown and all the supporting buttons/images/etc.  This lead me to redesign the app using a Tabbar controller and make the list and map views each under there own UIViewControllers.
+
+[![Design V2 video](http://img.youtube.com/vi/7hJ9BCB2nS4/0.jpg)](http://www.youtube.com/watch?v=7hJ9BCB2nS4)
+
