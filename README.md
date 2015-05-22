@@ -89,4 +89,4 @@ Here is a rough UI Wireframe of how the app will look and navigation flow.
 ### Design discussion ###
 Here is a short video about my thoughts around the v1 design:
 
-<video src="https://github.com/TNuzzi/interview-app/raw/master/movies/design-v1.mov" width="640" height="400" controls preload></video>
+[![Design V1 video](http://img.youtube.com/vi/jrjm1C8bOQ8/0.jpg)](http://www.youtube.com/watch?v=jrjm1C8bOQ8)
