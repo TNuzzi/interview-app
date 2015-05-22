@@ -99,7 +99,7 @@ Here is a rough UI Wireframe of how the app will look and navigation flow.
 #### Here is another video about why I changed the design (v2): ####
 
 #### Reason's for the redesign ####
-Understand app design is as important is coding.  For this app, I started down the path with my first design and soon realized it may not be the best design for future functionality.  Meaning, I had visually designed it to be 2 seperate views in a single UIViewController.  If I wanted to expand the on the functionality of either view I had to manage the state of which view (map or list) was being shown and all the supporting buttons/images/etc.  This lead me to redesign the app using a Tabbar controller and make the list and map views each under there own UIViewControllers.
+Understand app design is as important is coding.  For this app, I started down the path with my first design and soon realized it may not be the best design for future functionality.  Meaning, I had visually designed it to be 2 seperate views in a single UIViewController.  If I wanted to expand on the functionality of either view I had to manage the state of which view (map or list) was being shown and all the supporting buttons/images/etc.  This lead me to redesign the app using a Tabbar controller and make the list and map views each under there own UIViewControllers.
 
 [![Design V2 video](http://img.youtube.com/vi/7hJ9BCB2nS4/0.jpg)](http://www.youtube.com/watch?v=7hJ9BCB2nS4)
 
