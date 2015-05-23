@@ -78,6 +78,7 @@ A quick and easy way to find coffee shops around at my current location.
 *   [Sublime](http://www.sublimetext.com/) (non-coding related tasks, update Readme, etc.)
 *   [Markable](http://markable.in/) (Markdown editor)
 *   [GitHub Mac](https://mac.github.com/) (Managing source push to [GitHub](http://www.github.com))
+*   [Glyphish](http://www.glyphish.com/) (Image assets)
 
 ## UI Wireframe
 
