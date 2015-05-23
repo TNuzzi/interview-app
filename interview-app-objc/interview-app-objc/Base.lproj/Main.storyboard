@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I7I-yA-Oa9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Café Ahora-->
+        <scene sceneID="PkT-pi-u9w">
+            <objects>
+                <viewController id="aSF-8L-uqo" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="onZ-e8-Vea"/>
+                        <viewControllerLayoutGuide type="bottom" id="eGX-TC-uix"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bqL-q0-bEK">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xpc-ab-8ax">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="Xpc-ab-8ax" secondAttribute="bottom" constant="50" id="4T7-ah-CC3"/>
+                            <constraint firstItem="Xpc-ab-8ax" firstAttribute="leading" secondItem="bqL-q0-bEK" secondAttribute="leadingMargin" constant="-16" id="6x5-XW-cfJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xpc-ab-8ax" secondAttribute="trailing" constant="-16" id="FVC-bW-7wC"/>
+                            <constraint firstItem="Xpc-ab-8ax" firstAttribute="top" secondItem="onZ-e8-Vea" secondAttribute="bottom" id="QdJ-Uv-Gf5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Xpc-ab-8ax"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4T7-ah-CC3"/>
+                                <exclude reference="6x5-XW-cfJ"/>
+                                <exclude reference="FVC-bW-7wC"/>
+                                <exclude reference="QdJ-Uv-Gf5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Xpc-ab-8ax"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="4T7-ah-CC3"/>
+                                <include reference="6x5-XW-cfJ"/>
+                                <include reference="FVC-bW-7wC"/>
+                                <include reference="QdJ-Uv-Gf5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Café Ahora" id="wx5-YX-109">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="N9A-sy-tFR"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twb-xf-Do0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3193.5" y="-238.5"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="Vzk-A8-jKV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TXw-Z5-YIv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="xor-hX-Wlc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J68-JM-4N2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aSF-8L-uqo" kind="relationship" relationship="rootViewController" id="Lxb-X9-UfL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbN-V5-i4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275.5" y="-238.5"/>
+        </scene>
+        <!--Café Ahora-->
+        <scene sceneID="4Xk-m3-zaz">
+            <objects>
+                <tableViewController id="b6y-cM-evj" customClass="ListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="0XK-OX-XMa">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="1d6-rq-elb" customClass="ListTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1d6-rq-elb" id="uZ2-SM-5Qp">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13P-U4-fJn">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="efT-9O-8yZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <color key="backgroundColor" red="0.58672793609999996" green="1" blue="0.3757775881" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="UvK-Vw-vU5"/>
+                                                <constraint firstAttribute="height" constant="50" id="tZf-hS-BO1"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="UvK-Vw-vU5"/>
+                                                    <exclude reference="tZf-hS-BO1"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="UvK-Vw-vU5"/>
+                                                    <include reference="tZf-hS-BO1"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="efT-9O-8yZ" firstAttribute="leading" secondItem="uZ2-SM-5Qp" secondAttribute="leadingMargin" id="KhL-EK-NGZ"/>
+                                        <constraint firstItem="13P-U4-fJn" firstAttribute="leading" secondItem="efT-9O-8yZ" secondAttribute="trailing" constant="8" id="LYc-wj-FA5"/>
+                                        <constraint firstItem="efT-9O-8yZ" firstAttribute="top" secondItem="uZ2-SM-5Qp" secondAttribute="topMargin" constant="-3" id="cb1-3S-fQY"/>
+                                        <constraint firstItem="efT-9O-8yZ" firstAttribute="top" secondItem="13P-U4-fJn" secondAttribute="top" id="ocm-B1-ltW"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="13P-U4-fJn" secondAttribute="trailing" constant="-8" id="qcj-fV-0l4"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="13P-U4-fJn"/>
+                                            <exclude reference="efT-9O-8yZ"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="KhL-EK-NGZ"/>
+                                            <exclude reference="cb1-3S-fQY"/>
+                                            <exclude reference="ocm-B1-ltW"/>
+                                            <exclude reference="LYc-wj-FA5"/>
+                                            <exclude reference="qcj-fV-0l4"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="13P-U4-fJn"/>
+                                            <include reference="efT-9O-8yZ"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="KhL-EK-NGZ"/>
+                                            <include reference="cb1-3S-fQY"/>
+                                            <include reference="ocm-B1-ltW"/>
+                                            <include reference="LYc-wj-FA5"/>
+                                            <include reference="qcj-fV-0l4"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="image" destination="efT-9O-8yZ" id="r3B-d3-HnA"/>
+                                    <outlet property="name" destination="13P-U4-fJn" id="N7Q-Pz-1mc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="b6y-cM-evj" id="0m9-Ex-TpF"/>
+                            <outlet property="delegate" destination="b6y-cM-evj" id="ybx-X2-49y"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Café Ahora" id="NJy-NI-Ica">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="08t-a6-F0z"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFR-D6-udY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3193.5" y="456"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aFv-pi-SeE">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="I7I-yA-Oa9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="3c6-NL-0jZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TXw-Z5-YIv" kind="relationship" relationship="viewControllers" id="Jr7-aI-brJ"/>
+                        <segue destination="QFx-kj-S5w" kind="relationship" relationship="viewControllers" id="efj-cq-Rz1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7p3-rd-hBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357.5" y="-238.5"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="C74-29-jFz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QFx-kj-S5w" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" image="list" id="xOo-9C-Vxr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fwc-n5-bBY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b6y-cM-evj" kind="relationship" relationship="rootViewController" id="pRD-sX-8Mv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJl-wW-ciP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275.5" y="456"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list" width="20" height="16"/>
+        <image name="map" width="26" height="21"/>
+    </resources>
+</document>

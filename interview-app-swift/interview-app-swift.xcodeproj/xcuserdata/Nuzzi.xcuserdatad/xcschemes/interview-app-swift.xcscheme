@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E72DDAA71B097CFE0081B383"
-               BuildableName = "interview-app-objc.app"
-               BlueprintName = "interview-app-objc"
-               ReferencedContainer = "container:interview-app-objc.xcodeproj">
+               BlueprintIdentifier = "E72DDAD91B097D470081B383"
+               BuildableName = "interview-app-swift.app"
+               BlueprintName = "interview-app-swift"
+               ReferencedContainer = "container:interview-app-swift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E72DDAC01B097CFE0081B383"
-               BuildableName = "interview-app-objcTests.xctest"
-               BlueprintName = "interview-app-objcTests"
-               ReferencedContainer = "container:interview-app-objc.xcodeproj">
+               BlueprintIdentifier = "E72DDAEE1B097D470081B383"
+               BuildableName = "interview-app-swiftTests.xctest"
+               BlueprintName = "interview-app-swiftTests"
+               ReferencedContainer = "container:interview-app-swift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E72DDAC01B097CFE0081B383"
-               BuildableName = "interview-app-objcTests.xctest"
-               BlueprintName = "interview-app-objcTests"
-               ReferencedContainer = "container:interview-app-objc.xcodeproj">
+               BlueprintIdentifier = "E72DDAEE1B097D470081B383"
+               BuildableName = "interview-app-swiftTests.xctest"
+               BlueprintName = "interview-app-swiftTests"
+               ReferencedContainer = "container:interview-app-swift.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E72DDAA71B097CFE0081B383"
-            BuildableName = "interview-app-objc.app"
-            BlueprintName = "interview-app-objc"
-            ReferencedContainer = "container:interview-app-objc.xcodeproj">
+            BlueprintIdentifier = "E72DDAD91B097D470081B383"
+            BuildableName = "interview-app-swift.app"
+            BlueprintName = "interview-app-swift"
+            ReferencedContainer = "container:interview-app-swift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E72DDAA71B097CFE0081B383"
-            BuildableName = "interview-app-objc.app"
-            BlueprintName = "interview-app-objc"
-            ReferencedContainer = "container:interview-app-objc.xcodeproj">
+            BlueprintIdentifier = "E72DDAD91B097D470081B383"
+            BuildableName = "interview-app-swift.app"
+            BlueprintName = "interview-app-swift"
+            ReferencedContainer = "container:interview-app-swift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,10 +95,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E72DDAA71B097CFE0081B383"
-            BuildableName = "interview-app-objc.app"
-            BlueprintName = "interview-app-objc"
-            ReferencedContainer = "container:interview-app-objc.xcodeproj">
+            BlueprintIdentifier = "E72DDAD91B097D470081B383"
+            BuildableName = "interview-app-swift.app"
+            BlueprintName = "interview-app-swift"
+            ReferencedContainer = "container:interview-app-swift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
