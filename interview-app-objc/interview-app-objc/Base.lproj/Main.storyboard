@@ -51,8 +51,15 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Café Ahora" id="wx5-YX-109">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="N9A-sy-tFR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="N9A-sy-tFR">
+                            <connections>
+                                <action selector="refreshTapped:" destination="aSF-8L-uqo" id="3cg-9v-7Kz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="Xpc-ab-8ax" id="wBM-Jd-UzS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twb-xf-Do0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

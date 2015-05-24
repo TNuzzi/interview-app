@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface MapViewController : UIViewController <CLLocationManagerDelegate>
 
 @property CLLocationManager* locationManager;
+@property CLGeocoder* geocoder;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+- (IBAction)refreshTapped:(id)sender;
 
 @end
