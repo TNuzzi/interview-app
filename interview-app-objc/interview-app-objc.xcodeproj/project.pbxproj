@@ -10,6 +10,7 @@
 		E72D3B211B10220D00381A1D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B201B10220D00381A1D /* MapViewController.m */; };
 		E72D3B261B10236000381A1D /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B251B10236000381A1D /* ListTableViewController.m */; };
 		E72D3B2A1B10E42100381A1D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B291B10E42100381A1D /* ListTableViewCell.m */; };
+		E72D3B2C1B11549A00381A1D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72D3B2B1B11549A00381A1D /* CoreLocation.framework */; };
 		E72DDAAE1B097CFE0081B383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DDAAD1B097CFE0081B383 /* main.m */; };
 		E72DDAB11B097CFE0081B383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DDAB01B097CFE0081B383 /* AppDelegate.m */; };
 		E72DDAB41B097CFE0081B383 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DDAB31B097CFE0081B383 /* ViewController.m */; };
@@ -37,6 +38,7 @@
 		E72D3B251B10236000381A1D /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		E72D3B281B10E42100381A1D /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
 		E72D3B291B10E42100381A1D /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		E72D3B2B1B11549A00381A1D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E72DDAA81B097CFE0081B383 /* interview-app-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interview-app-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72DDAAC1B097CFE0081B383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72DDAAD1B097CFE0081B383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E72D3B2C1B11549A00381A1D /* CoreLocation.framework in Frameworks */,
 				E72DDB001B0980010081B383 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +106,7 @@
 		E72DDA9F1B097CFE0081B383 = {
 			isa = PBXGroup;
 			children = (
+				E72D3B2B1B11549A00381A1D /* CoreLocation.framework */,
 				E72DDAFF1B0980010081B383 /* MapKit.framework */,
 				E72DDAAA1B097CFE0081B383 /* interview-app-objc */,
 				E72DDAC41B097CFE0081B383 /* interview-app-objcTests */,
