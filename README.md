@@ -89,7 +89,7 @@ By no mean exhaustive
 *   [NSHipster](http://nshipster.com/) - Good and current articles
 *   [Apple Documentation](https://developer.apple.com/library/ios/navigation/) - It is getting better
    
-#### Favorite Shortcut Keys (use these frequently):
+#### Favorite XCode Shortcut Keys (use these frequently):
 *   Stop running - Command + .
 *   Run on selected device - Command + R
 *   Clean - Command + Shift + K
