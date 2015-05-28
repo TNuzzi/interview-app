@@ -1,0 +1,10 @@
+PODS:
+  - OAuthConsumer (1.0.3)
+
+DEPENDENCIES:
+  - OAuthConsumer
+
+SPEC CHECKSUMS:
+  OAuthConsumer: 9e99725d1d58d076ed13e6010a2d74f82e25e4cc
+
+COCOAPODS: 0.36.0.beta.1

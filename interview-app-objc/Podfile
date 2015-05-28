@@ -1,0 +1,11 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '7.0'
+
+target 'interview-app-objc' do
+    pod "OAuthConsumer"
+end
+
+target 'interview-app-objcTests' do
+
+end
+
