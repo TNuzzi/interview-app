@@ -7,13 +7,20 @@
 //
 
 #import "MapViewController.h"
+#import "CoffeeshopModel.h"
+#import <AddressBook/AddressBook.h>
 
 @implementation MapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.mapView.delegate = self;
     self.mapView.showsUserLocation = YES;
+    
+    // Initialize Yelp API service
+    self.yelpService = [[YelpAPIService alloc] init];
+    self.yelpService.delegate = self;
     
     // Initialize geocoder for reverse lookup
     self.geocoder = [[CLGeocoder alloc] init];
@@ -81,27 +88,104 @@
 }
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    NSLog(@"number in array: %lu", (unsigned long)locations.count);
+    // Fail fast if there are no locations
+    if([locations count] == 0) {
+        return;
+    }
     
-    CLLocation* location = locations[0];
+    // Get the first location (User's current location)
+    CLLocation* location = [locations objectAtIndex:0];
+    
+    // Move map to user's current location and zoom in
     [self.mapView setRegion:MKCoordinateRegionMakeWithDistance(location.coordinate, 10000, 10000) animated:YES];
     
-    NSLog(@"latitude: %f, Longitude: %f", location.coordinate.latitude, location.coordinate.longitude);
     
     [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray* placemarks, NSError* error){
-        if ([placemarks count] > 0)
-        {
-            NSLog(@"postalCode %@", [[placemarks objectAtIndex:0] postalCode]);
+        // Fail fast if we have errors or can't reverse lookup location
+        if(error != nil) {
+            NSDictionary *userInfo = [error userInfo];
+            NSString *errorString = [[userInfo objectForKey:NSUnderlyingErrorKey] localizedDescription];
+            NSLog(@"%@", errorString);
+            
+            [[[UIAlertView alloc] initWithTitle:@"Error"
+                                        message:@"Failed to lookup location address"
+                                       delegate:nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil] show];
+            return;
         }
         
-        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-        [annotation setCoordinate: CLLocationCoordinate2DMake(37.7762794, -122.4181595)];
-        [annotation setTitle:@"Ma'velous"]; //You can set the subtitle too
-        [self.mapView addAnnotation:annotation];
+        if([placemarks count] == 0) {
+            return;
+        }
+        
+        NSDictionary* dict = [[placemarks objectAtIndex:0] addressDictionary];
+        
+        NSString* searchLocation = [NSString stringWithFormat:@"%@ %@ %@",
+              [dict objectForKey:(NSString *) kABPersonAddressStreetKey],
+              [dict objectForKey:(NSString *) kABPersonAddressCityKey],
+              [dict objectForKey:(NSString *) kABPersonAddressZIPKey]];
+        
+        [self.yelpService findNearByCoffeshopsByLocation:searchLocation aLatitude:location.coordinate.latitude andLongitude:location.coordinate.longitude];
     }];
     
     // Just get the first location update then stop
     [self.locationManager stopUpdatingLocation];
+}
+
+#pragma mark - YelpAPIServiceDelegate
+
+-(void)loadResultWithDataArray:(NSArray *)resultArray {
+    NSLog(@"resultArray count: %lu", (unsigned long)resultArray.count);
+    
+    for (CoffeeshopModel* coffeeshop in resultArray) {
+        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+        [annotation setCoordinate: CLLocationCoordinate2DMake(coffeeshop.latitude, coffeeshop.longitude)];
+        [annotation setTitle:coffeeshop.name];
+        [annotation setSubtitle:[NSString stringWithFormat:@"%@ stars (%@ reviews)",
+                                         coffeeshop.rating,
+                                         coffeeshop.reviewCount]];
+        NSLog(@"coffeeshop.name: %@", coffeeshop.name);
+        [self.mapView addAnnotation:annotation];
+    }
+}
+
+#pragma mark - MKMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    
+    // Create a static string of pin identifier
+    static NSString* defaultPinID = @"CustomPinAnnotationView";
+    
+    // Handle annotations.
+    if ([annotation isKindOfClass:[MKPointAnnotation class]])
+    {
+        // Try to dequeue an existing pin view first.
+        MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
+        
+        if (!pinView)
+        {
+            // If an existing pin view was not available, create one.
+            pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:defaultPinID];
+            pinView.canShowCallout = YES;
+            pinView.animatesDrop = YES;
+            
+            // Add a detail disclosure button to the callout.
+            UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            pinView.rightCalloutAccessoryView = rightButton;
+            
+        } else {
+            pinView.annotation = annotation;
+        }
+        
+        return pinView;
+    }
+    
+    return nil;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    NSLog(@"tapped");
 }
 /*
 #pragma mark - Navigation

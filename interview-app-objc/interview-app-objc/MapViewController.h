@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "YelpAPIService.h"
 
-@interface MapViewController : UIViewController <CLLocationManagerDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, YelpAPIServiceDelegate>
 
 @property CLLocationManager* locationManager;
 @property CLGeocoder* geocoder;
+@property YelpAPIService* yelpService;
+
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)refreshTapped:(id)sender;
 
