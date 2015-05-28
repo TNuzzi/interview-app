@@ -80,6 +80,23 @@ A quick and easy way to find coffee shops around at my current location.
 *   [GitHub Mac](https://mac.github.com/) (Managing source push to [GitHub](http://www.github.com))
 *   [Glyphish](http://www.glyphish.com/) (Image assets)
 
+#### Development Websites/Resources
+By no mean exhaustive
+
+*   [iOS Playbook (Style Guide)](https://github.com/hyperoslo/iOS-playbook/blob/master/style-guidelines/ObjC.md) (Great resource for coding guidelines and best practices)
+*   [Stack overflow](http://stackoverflow.com/questions/tagged/ios)
+*   WWDC Videos - Great resource for diving deep into a single piece of the technology stack <br/>[2011](https://developer.apple.com/videos/wwdc/2011/)<br/>[2012](https://developer.apple.com/videos/wwdc/2012/)<br/>[2013](https://developer.apple.com/videos/wwdc/2013/)<br/>[2014](https://developer.apple.com/videos/wwdc/2014/)
+*   [NSHipster](http://nshipster.com/) - Good and current articles
+*   [Apple Documentation](https://developer.apple.com/library/ios/navigation/) - It is getting better
+   
+#### Favorite Shortcut Keys (use these frequently):
+*   Stop running - Command + .
+*   Run on selected device - Command + R
+*   Clean - Command + Shift + K
+*   Build - Command + B
+*   Test - Command + U
+*   Apple Core/Foundation Header classes - Command + Left Click
+
 ## UI Wireframe
 
 Here is a rough UI Wireframe of how the app will look and navigation flow.
@@ -103,4 +120,21 @@ Here is a rough UI Wireframe of how the app will look and navigation flow.
 Understand app design is as important is coding.  For this app, I started down the path with my first design and soon realized it may not be the best design for future functionality.  Meaning, I had visually designed it to be 2 seperate views in a single UIViewController.  If I wanted to expand on the functionality of either view I had to manage the state of which view (map or list) was being shown and all the supporting buttons/images/etc.  This lead me to redesign the app using a Tabbar controller and make the list and map views each under there own UIViewControllers.
 
 [![Design V2 video](http://img.youtube.com/vi/7hJ9BCB2nS4/0.jpg)](http://www.youtube.com/watch?v=7hJ9BCB2nS4)
+
+## App Development (Coding)
+
+### Project Structure ###
+Quick video on the project structure and layout.  It is pretty straight forward.  Using the MVC to layout put the appropriate files in their respective groups.
+
+[![Project Structure video](http://img.youtube.com/vi/d-Y2hOMeXAg/0.jpg)](http://www.youtube.com/watch?v=d-Y2hOMeXAg)
+
+### Coding Overview Part 1 ###
+This is a longer video where I go into detail about the current code and implementation.  This is a first pass at part of the implementation.  I have implementation the CoreLocation, Map, Yelp Service call and Map Pins.
+
+[![Coding Overview Part 1 video](http://img.youtube.com/vi/cmRGba1d3sU/0.jpg)](http://www.youtube.com/watch?v=cmRGba1d3sU)
+
+### Coding Refactor ###
+Quick video describing the upcoming need to refactor.  Currently, the MapViewController is breaking the [Single Responsiblity principle](http://en.wikipedia.org/wiki/Single_responsibility_principle).  This principle states that a class should do 1 thing (e.g. *view* render a view, *model* only hold model data, etc.).  However the current implementation of the MapViewController does more then orchestrating between its view and model.
+
+[![Coding Overview Part 1 video](http://img.youtube.com/vi/6eciKB30wM4/0.jpg)](http://www.youtube.com/watch?v=6eciKB30wM4)
 
