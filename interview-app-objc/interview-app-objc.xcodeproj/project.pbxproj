@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53C215151214C811FC8DC09 /* libPods-interview-app-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 729CD1B885CEFDC74893F61D /* libPods-interview-app-objc.a */; };
 		E72D3B211B10220D00381A1D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B201B10220D00381A1D /* MapViewController.m */; };
 		E72D3B261B10236000381A1D /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B251B10236000381A1D /* ListTableViewController.m */; };
 		E72D3B2A1B10E42100381A1D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B291B10E42100381A1D /* ListTableViewCell.m */; };
 		E72D3B2C1B11549A00381A1D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72D3B2B1B11549A00381A1D /* CoreLocation.framework */; };
+		E72D3B3B1B14081800381A1D /* YelpAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B3A1B14081800381A1D /* YelpAPIService.m */; };
+		E72D3B781B1414C200381A1D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72D3B771B1414C200381A1D /* Security.framework */; };
+		E72D3B7A1B1419DF00381A1D /* CoffeeshopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B791B1419DF00381A1D /* CoffeeshopModel.m */; };
 		E72DDAAE1B097CFE0081B383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DDAAD1B097CFE0081B383 /* main.m */; };
 		E72DDAB11B097CFE0081B383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DDAB01B097CFE0081B383 /* AppDelegate.m */; };
-		E72DDAB41B097CFE0081B383 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DDAB31B097CFE0081B383 /* ViewController.m */; };
 		E72DDAB71B097CFE0081B383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72DDAB51B097CFE0081B383 /* Main.storyboard */; };
 		E72DDAB91B097CFE0081B383 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72DDAB81B097CFE0081B383 /* Images.xcassets */; };
 		E72DDABC1B097CFE0081B383 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72DDABA1B097CFE0081B383 /* LaunchScreen.xib */; };
@@ -32,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CD9A953DA98EC64F4A7A963 /* Pods-interview-app-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-app-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-interview-app-objc/Pods-interview-app-objc.release.xcconfig"; sourceTree = "<group>"; };
+		5BBED5242497B43D616054D9 /* Pods-interview-app-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-app-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-interview-app-objc/Pods-interview-app-objc.debug.xcconfig"; sourceTree = "<group>"; };
+		729CD1B885CEFDC74893F61D /* libPods-interview-app-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-interview-app-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72D3B1F1B10220D00381A1D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		E72D3B201B10220D00381A1D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		E72D3B241B10236000381A1D /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
@@ -39,13 +45,17 @@
 		E72D3B281B10E42100381A1D /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
 		E72D3B291B10E42100381A1D /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
 		E72D3B2B1B11549A00381A1D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E72D3B391B14081800381A1D /* YelpAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAPIService.h; sourceTree = "<group>"; };
+		E72D3B3A1B14081800381A1D /* YelpAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpAPIService.m; sourceTree = "<group>"; };
+		E72D3B741B1408C100381A1D /* OAuthAPIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAuthAPIConstants.h; sourceTree = "<group>"; };
+		E72D3B771B1414C200381A1D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E72D3B791B1419DF00381A1D /* CoffeeshopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeshopModel.m; sourceTree = "<group>"; };
+		E72D3B7B1B1419F100381A1D /* CoffeeshopModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffeeshopModel.h; sourceTree = "<group>"; };
 		E72DDAA81B097CFE0081B383 /* interview-app-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interview-app-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72DDAAC1B097CFE0081B383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72DDAAD1B097CFE0081B383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E72DDAAF1B097CFE0081B383 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E72DDAB01B097CFE0081B383 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E72DDAB21B097CFE0081B383 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E72DDAB31B097CFE0081B383 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E72DDAB61B097CFE0081B383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E72DDAB81B097CFE0081B383 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E72DDABB1B097CFE0081B383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -60,8 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E72D3B781B1414C200381A1D /* Security.framework in Frameworks */,
 				E72D3B2C1B11549A00381A1D /* CoreLocation.framework in Frameworks */,
 				E72DDB001B0980010081B383 /* MapKit.framework in Frameworks */,
+				A53C215151214C811FC8DC09 /* libPods-interview-app-objc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E8540EF8F66C16A79176437 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E72D3B771B1414C200381A1D /* Security.framework */,
+				729CD1B885CEFDC74893F61D /* libPods-interview-app-objc.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E70043D31B16BD8000C4BE9C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E72D3B741B1408C100381A1D /* OAuthAPIConstants.h */,
+				E72D3B381B1407CF00381A1D /* YelpAPIService */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		E72D3B221B10221C00381A1D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +129,19 @@
 		E72D3B271B10242C00381A1D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E72D3B791B1419DF00381A1D /* CoffeeshopModel.m */,
+				E72D3B7B1B1419F100381A1D /* CoffeeshopModel.h */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E72D3B381B1407CF00381A1D /* YelpAPIService */ = {
+			isa = PBXGroup;
+			children = (
+				E72D3B391B14081800381A1D /* YelpAPIService.h */,
+				E72D3B3A1B14081800381A1D /* YelpAPIService.m */,
+			);
+			name = YelpAPIService;
 			sourceTree = "<group>";
 		};
 		E72DDA9F1B097CFE0081B383 = {
@@ -111,6 +152,8 @@
 				E72DDAAA1B097CFE0081B383 /* interview-app-objc */,
 				E72DDAC41B097CFE0081B383 /* interview-app-objcTests */,
 				E72DDAA91B097CFE0081B383 /* Products */,
+				EEF6A598F1EAC77407AC6CAC /* Pods */,
+				1E8540EF8F66C16A79176437 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,8 +174,7 @@
 				E72D3B271B10242C00381A1D /* Model */,
 				E72D3B231B10225300381A1D /* View */,
 				E72D3B221B10221C00381A1D /* Controller */,
-				E72DDAB21B097CFE0081B383 /* ViewController.h */,
-				E72DDAB31B097CFE0081B383 /* ViewController.m */,
+				E70043D31B16BD8000C4BE9C /* Services */,
 				E72DDAAB1B097CFE0081B383 /* Supporting Files */,
 			);
 			path = "interview-app-objc";
@@ -166,6 +208,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EEF6A598F1EAC77407AC6CAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BBED5242497B43D616054D9 /* Pods-interview-app-objc.debug.xcconfig */,
+				1CD9A953DA98EC64F4A7A963 /* Pods-interview-app-objc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E72DDACB1B097CFE0081B383 /* Build configuration list for PBXNativeTarget "interview-app-objc" */;
 			buildPhases = (
+				EA13F6ACE407B6C8AD03043F /* Check Pods Manifest.lock */,
 				E72DDAA41B097CFE0081B383 /* Sources */,
 				E72DDAA51B097CFE0081B383 /* Frameworks */,
 				E72DDAA61B097CFE0081B383 /* Resources */,
+				45DAA7859651418D2B3C1887 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +268,7 @@
 				TargetAttributes = {
 					E72DDAA71B097CFE0081B383 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = V67SX9S67X;
 					};
 					E72DDAC01B097CFE0081B383 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -261,17 +315,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45DAA7859651418D2B3C1887 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-interview-app-objc/Pods-interview-app-objc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA13F6ACE407B6C8AD03043F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E72DDAA41B097CFE0081B383 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E72DDAB41B097CFE0081B383 /* ViewController.m in Sources */,
 				E72DDAB11B097CFE0081B383 /* AppDelegate.m in Sources */,
 				E72DDAAE1B097CFE0081B383 /* main.m in Sources */,
 				E72D3B2A1B10E42100381A1D /* ListTableViewCell.m in Sources */,
 				E72D3B211B10220D00381A1D /* MapViewController.m in Sources */,
 				E72D3B261B10236000381A1D /* ListTableViewController.m in Sources */,
+				E72D3B3B1B14081800381A1D /* YelpAPIService.m in Sources */,
+				E72D3B7A1B1419DF00381A1D /* CoffeeshopModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,21 +483,29 @@
 		};
 		E72DDACC1B097CFE0081B383 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BBED5242497B43D616054D9 /* Pods-interview-app-objc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "interview-app-objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		E72DDACD1B097CFE0081B383 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD9A953DA98EC64F4A7A963 /* Pods-interview-app-objc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "interview-app-objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
