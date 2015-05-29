@@ -3,6 +3,7 @@ platform :ios, '7.0'
 
 target 'interview-app-objc' do
     pod "OAuthConsumer"
+    pod 'SDWebImage', '~>3.7'
 end
 
 target 'interview-app-objcTests' do

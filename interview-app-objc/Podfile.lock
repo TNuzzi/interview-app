@@ -1,10 +1,15 @@
 PODS:
   - OAuthConsumer (1.0.3)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
 
 DEPENDENCIES:
   - OAuthConsumer
+  - SDWebImage (~> 3.7)
 
 SPEC CHECKSUMS:
   OAuthConsumer: 9e99725d1d58d076ed13e6010a2d74f82e25e4cc
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
 COCOAPODS: 0.36.0.beta.1

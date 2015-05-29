@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5FC42F0AC3B9055C4D52F9B8"
-               BuildableName = "OAuthConsumer.bundle"
-               BlueprintName = "Pods-interview-app-objc-OAuthConsumer-OAuthConsumer"
+               BlueprintIdentifier = "F5FE74D04C4F3691FDAFD179"
+               BuildableName = "libPods-interview-app-objc-SDWebImage.a"
+               BlueprintName = "Pods-interview-app-objc-SDWebImage"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
