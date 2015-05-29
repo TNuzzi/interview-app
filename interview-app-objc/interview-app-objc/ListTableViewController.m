@@ -6,19 +6,20 @@
 //  Copyright (c) 2015 Tony Nuzzi. All rights reserved.
 //
 
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "ListTableViewController.h"
 #import "ListTableViewCell.h"
+
 
 @implementation ListTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+        
+    // Get the coffeeshop finder service instance and add self as a delegate
+    AppDelegate *appDeleate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [self setCoffeeShopFinderService:[appDeleate coffeeShopFinderService]];
+    [self.coffeeShopFinderService addDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,32 +27,83 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 1;
+- (IBAction)refreshTapped:(id)sender {
+    // Call coffee shop finder service to start location look up
+    [self.coffeeShopFinderService findCoffeeshopsInMyArea];
+    
+    // Scroll to the top if there are
+    if ([self numberOfSectionsInTableView:self.tableView] > 0)
+    {
+        NSIndexPath* top = [NSIndexPath indexPathForRow:NSNotFound inSection:0];
+        [self.tableView scrollToRowAtIndexPath:top atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    }
+    
+    
+    // Replace refresh button with the activity indicator
+    [self.refreshButton setEnabled:NO];
+    
+    UIActivityIndicatorView * activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [activityView setFrame:CGRectMake(0, 0, 25, 25)];
+    [activityView sizeToFit];
+    [activityView setAutoresizingMask:(UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];
+    UIBarButtonItem *loadingView = [[UIBarButtonItem alloc] initWithCustomView:activityView];
+    [self.navigationItem setRightBarButtonItem:loadingView];
+    [activityView startAnimating];
 }
 
+#pragma mark - CoffeeShopFinderServiceDelegate
+
+- (void)coffeeshopsInMyArea:(NSArray *)resultArray myLatitude:(CLLocationDegrees)latitude
+               andLongitude:(CLLocationDegrees)longitude {
+    
+    // Reload tableView
+    [self.tableView reloadData];
+    
+    // Reset right nav button to the refresh button
+    [self.navigationItem setRightBarButtonItem:self.refreshButton];
+    [self.refreshButton setEnabled:YES];
+}
+
+#pragma mark - Table view data source
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 10;
+    return [self.coffeeShopFinderService coffeeshopsInMyArea].count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-#warning TODO: Implement async image loading https://github.com/rs/SDWebImage
-    ListTableViewCell *cell = (ListTableViewCell *) [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    [cell.name setText:[NSString stringWithFormat:@"%li", (long)indexPath.row]];
     
-    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://s3-media4.fl.yelpcdn.com/bphoto/UeTR4bFel4SJAaYLiCZveA/ms.jpg"]];
-    [cell.image setImage:[UIImage imageWithData:data]];
+    static NSString * CellId = @"cell";
+    
+    // Since the table cell is coming from UITableViewController in the Main.storyboard a new instance is created
+    // Don't need to check for nil
+    ListTableViewCell *cell = (ListTableViewCell *) [tableView dequeueReusableCellWithIdentifier:CellId forIndexPath:indexPath];
+    
+    // Get the appropriate model from the coffeeshopsInMyArea array
+    CoffeeshopModel *model = [[self.coffeeShopFinderService coffeeshopsInMyArea] objectAtIndex:indexPath.row];
+    
+    // Setting the name label
+    [cell.name setText: model.name];
+    
+    // Setting the review count label
+    [cell.numOfReviews setText:[NSString stringWithFormat:@" - (%@ reviews)", model.reviewCount]];
+
+    // Setting main business image, using yelp image as the placeholder
+    [cell.image sd_setImageWithURL:[NSURL URLWithString:model.imageURL]
+                  placeholderImage:[UIImage imageNamed:@"yelp"]];
+    
+    // Setting ratings image
+    [cell.ratingImage sd_setImageWithURL:[NSURL URLWithString:model.ratingURL]];
+    
     
     return cell;
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Row Clicked");
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -95,5 +147,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end
