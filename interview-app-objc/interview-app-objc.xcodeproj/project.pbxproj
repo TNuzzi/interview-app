@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A53C215151214C811FC8DC09 /* libPods-interview-app-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 729CD1B885CEFDC74893F61D /* libPods-interview-app-objc.a */; };
+		E70043D51B174C8800C4BE9C /* CoffeeShopFinderService.m in Sources */ = {isa = PBXBuildFile; fileRef = E70043D41B174C8800C4BE9C /* CoffeeShopFinderService.m */; };
 		E72D3B211B10220D00381A1D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B201B10220D00381A1D /* MapViewController.m */; };
 		E72D3B261B10236000381A1D /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B251B10236000381A1D /* ListTableViewController.m */; };
 		E72D3B2A1B10E42100381A1D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B291B10E42100381A1D /* ListTableViewCell.m */; };
@@ -38,6 +39,8 @@
 		1CD9A953DA98EC64F4A7A963 /* Pods-interview-app-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-app-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-interview-app-objc/Pods-interview-app-objc.release.xcconfig"; sourceTree = "<group>"; };
 		5BBED5242497B43D616054D9 /* Pods-interview-app-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-app-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-interview-app-objc/Pods-interview-app-objc.debug.xcconfig"; sourceTree = "<group>"; };
 		729CD1B885CEFDC74893F61D /* libPods-interview-app-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-interview-app-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70043D41B174C8800C4BE9C /* CoffeeShopFinderService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeShopFinderService.m; sourceTree = "<group>"; };
+		E70043D61B174CA700C4BE9C /* CoffeeShopFinderService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffeeShopFinderService.h; sourceTree = "<group>"; };
 		E72D3B1F1B10220D00381A1D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		E72D3B201B10220D00381A1D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		E72D3B241B10236000381A1D /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 			children = (
 				E72D3B741B1408C100381A1D /* OAuthAPIConstants.h */,
 				E72D3B381B1407CF00381A1D /* YelpAPIService */,
+				E70043D41B174C8800C4BE9C /* CoffeeShopFinderService.m */,
+				E70043D61B174CA700C4BE9C /* CoffeeShopFinderService.h */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				E72D3B261B10236000381A1D /* ListTableViewController.m in Sources */,
 				E72D3B3B1B14081800381A1D /* YelpAPIService.m in Sources */,
 				E72D3B7A1B1419DF00381A1D /* CoffeeshopModel.m in Sources */,
+				E70043D51B174C8800C4BE9C /* CoffeeShopFinderService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
