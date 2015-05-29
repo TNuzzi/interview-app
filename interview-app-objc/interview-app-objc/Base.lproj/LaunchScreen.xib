@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7706"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,72 +10,84 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-lw-YIK">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Café Ahora" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glq-MW-jSS">
-                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXu-hh-SMU">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="464" id="GB6-wy-CAA"/>
-                        <constraint firstAttribute="height" constant="45" id="yNy-Yb-A2u"/>
+                        <constraint firstAttribute="height" constant="65" id="eSg-qw-xap"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="40"/>
-                    <color key="textColor" red="1" green="0.56871961110000002" blue="0.38345023029999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="GB6-wy-CAA"/>
-                            <exclude reference="yNy-Yb-A2u"/>
+                            <exclude reference="eSg-qw-xap"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
-                            <include reference="GB6-wy-CAA"/>
-                            <include reference="yNy-Yb-A2u"/>
+                            <include reference="eSg-qw-xap"/>
                         </mask>
                     </variation>
-                </label>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCr-cF-22C">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="TKC-ST-HPk"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="TKC-ST-HPk"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="TKC-ST-HPk"/>
+                        </mask>
+                    </variation>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Glq-MW-jSS" secondAttribute="trailing" constant="8" id="HQe-a7-Ffz"/>
-                <constraint firstAttribute="centerY" secondItem="ITE-lw-YIK" secondAttribute="centerY" id="VVm-nd-cs9"/>
-                <constraint firstItem="Glq-MW-jSS" firstAttribute="top" secondItem="ITE-lw-YIK" secondAttribute="bottom" constant="45" id="YEi-Yx-bMk"/>
-                <constraint firstItem="Glq-MW-jSS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="fqh-Cm-sCZ"/>
-                <constraint firstAttribute="centerX" secondItem="ITE-lw-YIK" secondAttribute="centerX" id="sQB-r2-ndR"/>
+                <constraint firstItem="nCr-cF-22C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="35G-hM-xFJ"/>
+                <constraint firstItem="nCr-cF-22C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="L2I-hH-9WU"/>
+                <constraint firstItem="XXu-hh-SMU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SXg-4O-3Hb"/>
+                <constraint firstItem="XXu-hh-SMU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Uem-uJ-xgy"/>
+                <constraint firstAttribute="bottom" secondItem="nCr-cF-22C" secondAttribute="bottom" id="WtJ-lV-Ewd"/>
+                <constraint firstAttribute="trailing" secondItem="nCr-cF-22C" secondAttribute="trailing" id="cvM-1D-HEk"/>
+                <constraint firstAttribute="trailing" secondItem="XXu-hh-SMU" secondAttribute="trailing" id="z2C-Oi-n23"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="ITE-lw-YIK"/>
-                    <exclude reference="Glq-MW-jSS"/>
+                    <exclude reference="XXu-hh-SMU"/>
+                    <exclude reference="nCr-cF-22C"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="VVm-nd-cs9"/>
-                    <exclude reference="sQB-r2-ndR"/>
-                    <exclude reference="HQe-a7-Ffz"/>
-                    <exclude reference="YEi-Yx-bMk"/>
-                    <exclude reference="fqh-Cm-sCZ"/>
+                    <exclude reference="SXg-4O-3Hb"/>
+                    <exclude reference="Uem-uJ-xgy"/>
+                    <exclude reference="z2C-Oi-n23"/>
+                    <exclude reference="35G-hM-xFJ"/>
+                    <exclude reference="L2I-hH-9WU"/>
+                    <exclude reference="WtJ-lV-Ewd"/>
+                    <exclude reference="cvM-1D-HEk"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
-                    <include reference="ITE-lw-YIK"/>
-                    <include reference="Glq-MW-jSS"/>
+                    <include reference="XXu-hh-SMU"/>
+                    <include reference="nCr-cF-22C"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="VVm-nd-cs9"/>
-                    <include reference="sQB-r2-ndR"/>
-                    <include reference="HQe-a7-Ffz"/>
-                    <include reference="YEi-Yx-bMk"/>
-                    <include reference="fqh-Cm-sCZ"/>
+                    <include reference="SXg-4O-3Hb"/>
+                    <include reference="Uem-uJ-xgy"/>
+                    <include reference="z2C-Oi-n23"/>
+                    <include reference="35G-hM-xFJ"/>
+                    <exclude reference="L2I-hH-9WU"/>
+                    <include reference="WtJ-lV-Ewd"/>
+                    <include reference="cvM-1D-HEk"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
-    <resources>
-        <image name="launchIcon" width="240" height="240"/>
-    </resources>
 </document>
