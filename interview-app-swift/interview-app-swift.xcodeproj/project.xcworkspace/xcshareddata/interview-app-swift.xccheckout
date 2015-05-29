@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>03EA669F-F3C6-44C5-9068-7AA297805333</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E5538BA92BDDD40EDDABA93374D2E1741851DE73</key>
+		<string>https://github.com/TNuzzi/interview-app</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>interview-app-swift/interview-app-swift.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E5538BA92BDDD40EDDABA93374D2E1741851DE73</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TNuzzi/interview-app</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E5538BA92BDDD40EDDABA93374D2E1741851DE73</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E5538BA92BDDD40EDDABA93374D2E1741851DE73</string>
+			<key>IDESourceControlWCCName</key>
+			<string>interview-app</string>
+		</dict>
+	</array>
+</dict>
+</plist>
