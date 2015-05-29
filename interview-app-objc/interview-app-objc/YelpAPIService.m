@@ -35,7 +35,7 @@
                  latitude, longitude,
                  SEARCH_RESULT_LIMIT] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
-    NSLog(@"YELP URL: %@", urlString);
+//    NSLog(@"YELP URL: %@", urlString);
     
     // Initialize URL object
     NSURL *URL = [NSURL URLWithString:urlString];
