@@ -7,15 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-#import "YelpAPIService.h"
+#import "CoffeeShopFinderService.h"
+#import "CoffeeshopModel.h"
+#import "AppDelegate.h"
 
-@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, YelpAPIServiceDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, CoffeeShopFinderServiceDelegate>
 
-@property CLLocationManager* locationManager;
-@property CLGeocoder* geocoder;
-@property YelpAPIService* yelpService;
+@property (weak, nonatomic) CoffeeShopFinderService* coffeeShopFinderService;
+
+// Making this strong because it will removed and readded
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)refreshTapped:(id)sender;
