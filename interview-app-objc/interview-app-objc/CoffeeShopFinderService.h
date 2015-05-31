@@ -13,8 +13,10 @@
 #import "CoffeeshopModel.h"
 
 @protocol CoffeeShopFinderServiceDelegate <NSObject>
--(void)coffeeshopsInMyArea:(NSArray *)resultArray myLatitude:(CLLocationDegrees)latitude
-              andLongitude:(CLLocationDegrees)longitude;
+-(void) coffeeshopsInMyArea:(NSArray *)resultArray myLatitude:(CLLocationDegrees)latitude
+                                                   andLongitude:(CLLocationDegrees)longitude;
+-(void) noCoffeeshopsFoundAtLatitude:(CLLocationDegrees)latitude
+                        andLongitude:(CLLocationDegrees)longitude;
 @end
 
 @interface CoffeeShopFinderService : NSObject <CLLocationManagerDelegate, YelpAPIServiceDelegate>

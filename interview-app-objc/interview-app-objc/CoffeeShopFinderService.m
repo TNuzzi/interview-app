@@ -35,6 +35,9 @@
         // Set desired accuracy to "nearest ten meters".  Does not need to best accuracy
         [self.locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
         
+        // Set distance filter so update is not called continuously
+        [self.locationManager setDistanceFilter:10.0f];
+        
         // Check to make sure location services are enabled on user's device
         if([CLLocationManager locationServicesEnabled]) {
             
@@ -121,15 +124,23 @@
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     // Fail fast if there are no locations
     if([locations count] == 0) {
+        [self notifyDelegatesNoCoffeeshopsFound];
         return;
     }
     
-    // Get the first location (User's current location)
-    CLLocation* location = [locations objectAtIndex:0];
+    // Get last object since the order of the location are chronological
+    CLLocation* location = [locations lastObject];
+    
+    // If location has not been updated just return and wait for the next update
+    if(location.coordinate.latitude == self.myLatitude &&
+       location.coordinate.longitude == self.myLongitude) {
+        return;
+    }
     
     [self setMyLatitude: location.coordinate.latitude];
     [self setMyLongitude: location.coordinate.longitude];
     
+    // Do reverse lookup on latest location
     [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray* placemarks, NSError* error){
         // Fail fast if we have errors or can't reverse lookup location
         if(error != nil) {
@@ -137,15 +148,23 @@
             NSString *errorString = [[userInfo objectForKey:NSUnderlyingErrorKey] localizedDescription];
             NSLog(@"%@", errorString);
             
-            [[[UIAlertView alloc] initWithTitle:@"Error"
-                                        message:@"Failed to lookup location address"
-                                       delegate:nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil] show];
+            // Initialize alert controller
+            UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Failed to lookup location address." preferredStyle:UIAlertControllerStyleAlert];
+            
+            // Ok Action button
+            UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:okAction];
+            
+            // Show Alert controller
+            [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentViewController:alertController animated:YES completion:nil];
+
+            [self notifyDelegatesNoCoffeeshopsFound];
             return;
         }
         
+        // No info found
         if([placemarks count] == 0) {
+            [self notifyDelegatesNoCoffeeshopsFound];
             return;
         }
         
@@ -166,6 +185,14 @@
 #pragma mark - YelpAPIServiceDelegate
 
 - (void)loadResultWithDataArray:(NSArray *)resultArray {
+    // Fail fast if no coffeeshops are found
+    if([resultArray count] == 0) {
+        // Make sure cached version is set to zero
+        [self setCoffeeshopsInMyArea:@[]];
+        
+        [self notifyDelegatesNoCoffeeshopsFound];
+        return;
+    }
     
     // Cache results
     self.coffeeshopsInMyArea = [NSArray arrayWithArray:resultArray];
@@ -173,6 +200,28 @@
     // Call all registered delegates
     for(id<CoffeeShopFinderServiceDelegate> delegate in self._delegates){
         [delegate coffeeshopsInMyArea:self.coffeeshopsInMyArea myLatitude:self.myLatitude andLongitude:self.myLongitude];
+    }
+}
+
+#pragma mark - Private
+- (void) notifyDelegatesNoCoffeeshopsFound {
+    
+    // Make sure cached version is set to zero
+    [self setCoffeeshopsInMyArea:@[]];
+    
+    // Initialize alert controller
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Sorry" message:@"No coffee shops were found in your area." preferredStyle:UIAlertControllerStyleAlert];
+    
+    // Ok Action button
+    UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:okAction];
+    
+    // Show Alert controller
+    [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentViewController:alertController animated:YES completion:nil];
+    
+    // Notify all registered delegates
+    for(id<CoffeeShopFinderServiceDelegate> delegate in self._delegates){
+        [delegate noCoffeeshopsFoundAtLatitude:self.myLatitude andLongitude:self.myLongitude];
     }
 }
 @end
