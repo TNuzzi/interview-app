@@ -9,6 +9,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ListTableViewController.h"
 #import "ListTableViewCell.h"
+#import "CoffeeshopDetailsViewController.h"
 
 
 @implementation ListTableViewController
@@ -42,13 +43,29 @@
     // Replace refresh button with the activity indicator
     [self.refreshButton setEnabled:NO];
     
+    // Create an activity indicator and replace the refresh button
     UIActivityIndicatorView * activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    
+    // Set the activity indicator size
     [activityView setFrame:CGRectMake(0, 0, 25, 25)];
     [activityView sizeToFit];
     [activityView setAutoresizingMask:(UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin)];
+    
+    // Add to new Button bar item and set on nav bar
     UIBarButtonItem *loadingView = [[UIBarButtonItem alloc] initWithCustomView:activityView];
     [self.navigationItem setRightBarButtonItem:loadingView];
+    
+    // Start spinning
     [activityView startAnimating];
+}
+
+-(void) noCoffeeshopsFoundAtLatitude:(CLLocationDegrees)latitude andLongitude:(CLLocationDegrees)longitude {
+    // Clear table to indicate no coffee shops found
+    [self.tableView reloadData];
+    
+    // Reset right nav button to the refresh button
+    [self.navigationItem setRightBarButtonItem:self.refreshButton];
+    [self.refreshButton setEnabled:YES];
 }
 
 #pragma mark - CoffeeShopFinderServiceDelegate
@@ -64,7 +81,7 @@
     [self.refreshButton setEnabled:YES];
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.coffeeShopFinderService coffeeshopsInMyArea].count;
@@ -99,52 +116,22 @@
     return cell;
 }
 
-#pragma mark - Table view delegate
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Row Clicked");
+    [self performSegueWithIdentifier:@"details" sender:indexPath];
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = (NSIndexPath *) sender;
+    CoffeeshopModel *model = [[self.coffeeShopFinderService coffeeshopsInMyArea] objectAtIndex:indexPath.row];
+    CoffeeshopDetailsViewController *detailVC = [segue destinationViewController];
+    
+    [detailVC setModel:model];
 }
-*/
+
 @end
