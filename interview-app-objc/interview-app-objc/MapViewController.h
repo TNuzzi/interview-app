@@ -11,6 +11,8 @@
 #import "CoffeeShopFinderService.h"
 #import "CoffeeshopModel.h"
 #import "AppDelegate.h"
+#import "CoffeeShopPointAnnotation.h"
+#import "CoffeeshopDetailsViewController.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, CoffeeShopFinderServiceDelegate>
 
