@@ -12,13 +12,7 @@
 
 - (void)awakeFromNib {
     // Make image view round
-    self.image.layer.cornerRadius = 25;
-    self.image.layer.masksToBounds = YES;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    [self.image.layer setCornerRadius:25];
+    [self.image.layer setMasksToBounds:YES];
 }
 @end
