@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A53C215151214C811FC8DC09 /* libPods-interview-app-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 729CD1B885CEFDC74893F61D /* libPods-interview-app-objc.a */; };
 		E70043D51B174C8800C4BE9C /* CoffeeShopFinderService.m in Sources */ = {isa = PBXBuildFile; fileRef = E70043D41B174C8800C4BE9C /* CoffeeShopFinderService.m */; };
+		E70043D91B1809E300C4BE9C /* CoffeeshopDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E70043D81B1809E300C4BE9C /* CoffeeshopDetailsViewController.m */; };
+		E70043DC1B1810E100C4BE9C /* CoffeeShopPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E70043DB1B1810E100C4BE9C /* CoffeeShopPointAnnotation.m */; };
 		E72D3B211B10220D00381A1D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B201B10220D00381A1D /* MapViewController.m */; };
 		E72D3B261B10236000381A1D /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B251B10236000381A1D /* ListTableViewController.m */; };
 		E72D3B2A1B10E42100381A1D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72D3B291B10E42100381A1D /* ListTableViewCell.m */; };
@@ -23,6 +25,7 @@
 		E72DDABC1B097CFE0081B383 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72DDABA1B097CFE0081B383 /* LaunchScreen.xib */; };
 		E72DDAC81B097CFE0081B383 /* interview_app_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DDAC71B097CFE0081B383 /* interview_app_objcTests.m */; };
 		E72DDB001B0980010081B383 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72DDAFF1B0980010081B383 /* MapKit.framework */; };
+		E7A237B61B18FFEC00F30C91 /* DetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A237B51B18FFEC00F30C91 /* DetailsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,10 @@
 		729CD1B885CEFDC74893F61D /* libPods-interview-app-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-interview-app-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70043D41B174C8800C4BE9C /* CoffeeShopFinderService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeShopFinderService.m; sourceTree = "<group>"; };
 		E70043D61B174CA700C4BE9C /* CoffeeShopFinderService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffeeShopFinderService.h; sourceTree = "<group>"; };
+		E70043D71B1809E300C4BE9C /* CoffeeshopDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeshopDetailsViewController.h; sourceTree = "<group>"; };
+		E70043D81B1809E300C4BE9C /* CoffeeshopDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeshopDetailsViewController.m; sourceTree = "<group>"; };
+		E70043DA1B1810E100C4BE9C /* CoffeeShopPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeShopPointAnnotation.h; sourceTree = "<group>"; };
+		E70043DB1B1810E100C4BE9C /* CoffeeShopPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeShopPointAnnotation.m; sourceTree = "<group>"; };
 		E72D3B1F1B10220D00381A1D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		E72D3B201B10220D00381A1D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		E72D3B241B10236000381A1D /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
@@ -66,6 +73,8 @@
 		E72DDAC61B097CFE0081B383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72DDAC71B097CFE0081B383 /* interview_app_objcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = interview_app_objcTests.m; sourceTree = "<group>"; };
 		E72DDAFF1B0980010081B383 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E7A237B41B18FFEC00F30C91 /* DetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewCell.h; sourceTree = "<group>"; };
+		E7A237B51B18FFEC00F30C91 /* DetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,8 @@
 				E72D3B201B10220D00381A1D /* MapViewController.m */,
 				E72D3B241B10236000381A1D /* ListTableViewController.h */,
 				E72D3B251B10236000381A1D /* ListTableViewController.m */,
+				E70043D71B1809E300C4BE9C /* CoffeeshopDetailsViewController.h */,
+				E70043D81B1809E300C4BE9C /* CoffeeshopDetailsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -127,6 +138,10 @@
 				E72DDAB51B097CFE0081B383 /* Main.storyboard */,
 				E72D3B281B10E42100381A1D /* ListTableViewCell.h */,
 				E72D3B291B10E42100381A1D /* ListTableViewCell.m */,
+				E70043DA1B1810E100C4BE9C /* CoffeeShopPointAnnotation.h */,
+				E70043DB1B1810E100C4BE9C /* CoffeeShopPointAnnotation.m */,
+				E7A237B41B18FFEC00F30C91 /* DetailsTableViewCell.h */,
+				E7A237B51B18FFEC00F30C91 /* DetailsTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -359,11 +374,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E72DDAB11B097CFE0081B383 /* AppDelegate.m in Sources */,
+				E70043D91B1809E300C4BE9C /* CoffeeshopDetailsViewController.m in Sources */,
 				E72DDAAE1B097CFE0081B383 /* main.m in Sources */,
 				E72D3B2A1B10E42100381A1D /* ListTableViewCell.m in Sources */,
 				E72D3B211B10220D00381A1D /* MapViewController.m in Sources */,
+				E70043DC1B1810E100C4BE9C /* CoffeeShopPointAnnotation.m in Sources */,
 				E72D3B261B10236000381A1D /* ListTableViewController.m in Sources */,
 				E72D3B3B1B14081800381A1D /* YelpAPIService.m in Sources */,
+				E7A237B61B18FFEC00F30C91 /* DetailsTableViewCell.m in Sources */,
 				E72D3B7A1B1419DF00381A1D /* CoffeeshopModel.m in Sources */,
 				E70043D51B174C8800C4BE9C /* CoffeeShopFinderService.m in Sources */,
 			);
