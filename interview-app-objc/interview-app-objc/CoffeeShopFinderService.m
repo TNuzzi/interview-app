@@ -35,9 +35,6 @@
         // Set desired accuracy to "nearest ten meters".  Does not need to best accuracy
         [self.locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
         
-        // Set distance filter so update is not called continuously
-        [self.locationManager setDistanceFilter:10.0f];
-        
         // Check to make sure location services are enabled on user's device
         if([CLLocationManager locationServicesEnabled]) {
             
@@ -130,12 +127,6 @@
     
     // Get last object since the order of the location are chronological
     CLLocation* location = [locations lastObject];
-    
-    // If location has not been updated just return and wait for the next update
-    if(location.coordinate.latitude == self.myLatitude &&
-       location.coordinate.longitude == self.myLongitude) {
-        return;
-    }
     
     [self setMyLatitude: location.coordinate.latitude];
     [self setMyLongitude: location.coordinate.longitude];
