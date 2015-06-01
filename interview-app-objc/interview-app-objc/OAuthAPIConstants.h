@@ -10,9 +10,9 @@
 #define OAuthAPIConstants_h
 
 // DEFINE OAUTH CONSTANTS HERE
-#define OAUTH_CONSUMER_KEY @"Consumer Key"
-#define OAUTH_CONSUMER_SECRET @"Consumer Secret"
-#define OAUTH_TOKEN @"Token"
-#define OAUTH_TOKEN_SECRET @"Token Secret"
+#define OAUTH_CONSUMER_KEY @"E2W9cbmUgEus1ZUcQumcjw"
+#define OAUTH_CONSUMER_SECRET @"KAiusaOQBh2DEqKlJKdx4b4ipEM"
+#define OAUTH_TOKEN @"0i0ThZJBfkGLxlXIVf8r03pI_DKGPAMu"
+#define OAUTH_TOKEN_SECRET @"cD8Uuf-kDBChuxqPJLmHrP3Klyg"
 
 #endif
