@@ -5,12 +5,12 @@ Interview app
 Demostrate my ability to think through app design and development.
 
 ### App design and development philosophy ###
-1.  **Focus on the problem**<br/>Just because you have the ability to code a feature does not mean it belongs in the app.  App development is a cross between art and technology even on the coding side.  Knowing when to say **no** can be just as hard as implemenation. <br/>When coding a new feature I try to keep in mind *"how does this solve the customer probem?"*  This may seem obvious but software bloat is still prevlent in mobile apps.  In today's app the *hamburger menu* has been evidence of an organization's inability to make a decision.<br/><br/>
-2.  **Get the idea out of my head and into my hand as soon as possible**<br/>Rapid prototyping is a great way to validate value.  With today's tools and technology it is easy and fast to build products on mobile.  The hard part is going to be testing with real customers.<br/><br/>
+1.  **Focus on the problem**<br/>Having the ability to code a feature does not mean it belongs in the app.  App development is a cross between art and technology.  Knowing when to say **no** can be just as hard as implemenation. <br/>When coding a new feature I try to keep this mind, *"how does this solve the customer probem?"*  This may seem obvious but software bloat is still a prevlent problem in mobile apps.  In today's app the *hamburger menu* is evidence of an organization's inability to make a decision.<br/><br/>
+2.  **Get the idea out of my head and into my hands as soon as possible**<br/>Rapid prototyping is a great way to validate value.  With today's tools and technology it is easy to build products on mobile.  The hard part is testing for the real customer value.<br/><br/>
 3.  **Code wins arguments**<br />This goes in-hand with rapid prototyping.  Everyone has an opinion on how to solve a customer's problem.  The advantage of being a developer is, I can show you in a relatively short period of time.  I make it a point to kill the need to do a PowerPoint.<br/><br/>
-4.  **Customers empathy should be the cornerstone of future features**<br/>As a developer this is a difficult thing to embrace. Customer don't alway know what they want or how to solve the problem they are having.  Through very *deliberate* analytics, I try learn how and why the customer uses the app.  This is paired with in-person customer interviews.<br/><br/>
-5.  **Love product development as much as coding**<br/>An app is just part of the solution.  Learning how to work with marketing, sales, customer support, (etc.) is as important as developing the app.  The success in the app store is not all luck.<br/><br/>
-6.  **Less analytics is better**<br/>This is also a bit of art and science.  The key is knowing what you want to learn and work backwards.  The worse thing you can do is measure everything and try to glean product direction out of it.  This will lead to indicision because you can make up any metric and justify it with enough analytics.  Know what you want to learn and measure that.
+4.  **Customers empathy should be the cornerstone of future features**<br/>As a developer this can be a difficult concept to embrace. Customer don't alway know what they want or how to solve the problem.  Through very *deliberate* analytics, I try to learn how and why the customer uses the app.  This is paired with in-person customer interviews.<br/><br/>
+5.  **Love product development as much as coding**<br/>An app is just part of the solution.  Learning how to work with marketing, sales, customer support, (etc.) is as important as developing the app.  Success in the app store is not all about luck.<br/><br/>
+6.  **Less analytics is better**<br/>This is also a bit of art and science.  The key is undersating what you want to learn (measure) and work backwards.  Most companys choose to measure everything and try to glean product direction out of it.  This often leads to indicision because you can make up any metric and justify.  Know what you want to learn and measure that.
 
 
 App
@@ -24,7 +24,7 @@ A quick and easy way to find coffee shops around at my current location.
 
 ###Base features###
 *   Map View w/ pins (visual location on map)
-*   Pins should indicate shop name and any helpful selection information
+*   Pins should indicate coffee shop name and any helpful selection information
 *   List View with Search
 *   Details about the coffee shop (name, location, etc)
 
@@ -100,7 +100,7 @@ By no mean exhaustive
 
 ## UI Wireframe
 
-Here is a rough UI Wireframe of how the app will look and navigation flow.
+Here is a rough UI Wireframe of the design and navigation flow.
 
 **(Version 1)**<br />
 ![Version 1 - UI Wireframe](https://raw.githubusercontent.com/TNuzzi/interview-app/master/images/wireframe.png)
@@ -118,19 +118,19 @@ Here is a rough UI Wireframe of how the app will look and navigation flow.
 #### Here is another video about why I changed the design (v2): ####
 
 #### Reason's for the redesign ####
-Understand app design is as important is coding.  For this app, I started down the path with my first design and soon realized it may not be the best design for future functionality.  Meaning, I had visually designed it to be 2 seperate views in a single UIViewController.  If I wanted to expand on the functionality of either view I had to manage the state of which view (map or list) was being shown and all the supporting buttons/images/etc.  This lead me to redesign the app using a Tabbar controller and make the list and map views each under there own UIViewControllers.
+Understanding app design is important to a well functioning app.  For this app, I started down the path with my first design and soon realized it may not work for future functionality.  Meaning, I had visually designed it to be 2 seperate views in a single UIViewController.  If I wanted to expand on the functionality of either view I had to manage the state of which view (map or list) was being shown and all the supporting buttons/images/etc.  This lead me to redesign the app using a UITabbarController and make the list and map views each under there own UIViewControllers.
 
 [![Design V2 video](http://img.youtube.com/vi/7hJ9BCB2nS4/0.jpg)](http://www.youtube.com/watch?v=7hJ9BCB2nS4)
 
 ## App Development (Coding)
 
 ### Project Structure ###
-Quick video on the project structure and layout.  It is pretty straight forward.  Using the MVC to layout put the appropriate files in their respective groups.
+Quick video on the project structure and layout.  It is pretty straight forward.  Using the MVC paradigm to layout put the appropriate files in their respective groups.
 
 [![Project Structure video](http://img.youtube.com/vi/d-Y2hOMeXAg/0.jpg)](http://www.youtube.com/watch?v=d-Y2hOMeXAg)
 
 ### Coding Overview Part 1 ###
-This is a longer video where I go into detail about the current code and implementation.  This is a first pass at part of the implementation.  I have implementation the CoreLocation, Map, Yelp Service call and Map Pins.
+This is a longer video where I go into detail about the current code implementation.  This is a first pass of the implementation.  I am using CoreLocation, MapView, Yelp Service call and Map Annotations.
 
 [![Coding Overview Part 1 video](http://img.youtube.com/vi/cmRGba1d3sU/0.jpg)](http://www.youtube.com/watch?v=cmRGba1d3sU)
 
@@ -144,14 +144,15 @@ A quick video on a performance issue I encountered with loading remote images in
 
 The problem is with image caching and the way the code is retreiving the images. 
 
-1.  The images are not cached.  Meaning, every time the cellForRow content is request the app has to go the remote server and retreive the image.
+1.  The images are not cached.  Meaning, every time the cellForRow is called, the app has to go the remote server and retreive the image.
 2.  The image is downloaded on the UI thread.
 
 There are a couple of things I could do to fix this issue:
 
 1.  Make the download aynchronious by using `NSOperationQueue`(to spawn background thread to download the images) or `NSURLSession`.  With the images downloaded write them to file or use something like `NSURLCache`.
 2.  Read the images from a cache or file system.
-3.  Use a battle tested library that does 1 and 2.  
+
+Here is the offending code:
 ```
     NSData *imageData = [[NSData alloc] initWithContentsOfURL: [URL URLWithString: model.imageURL]];
     [cell.image setImage: [UIImage imageWithData: imageData]];
@@ -159,6 +160,6 @@ There are a couple of things I could do to fix this issue:
     NSData *ratingsData = [[NSData alloc] initWithContentsOfURL: [URL URLWithString: model.ratingsData]];
     [cell.ratingImage setImage: [UIImage imageWithData: imageData]];
 ```
-To solve this problem I chose [SD Webimage](https://github.com/rs/SDWebImage).  It is available via CocoaPods.  SD Webimage uses extension to extends UIImage class and provides download (background) and image caching.
+To solve this problem I chose to use [SD Webimage](https://github.com/rs/SDWebImage).  It is available via CocoaPods.  SD Webimage uses extension to extends UIImage class and provides download (background) and image caching.
 
 [![Performance Issue video](http://img.youtube.com/vi/rHlZk-OvUek/0.jpg)](http://www.youtube.com/watch?v=rHlZk-OvUek)
