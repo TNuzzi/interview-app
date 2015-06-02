@@ -79,6 +79,7 @@ A quick and easy way to find coffee shops around at my current location.
 *   [Markable](http://markable.in/) (Markdown editor)
 *   [GitHub Mac](https://mac.github.com/) (Managing source push to [GitHub](http://www.github.com))
 *   [Glyphish](http://www.glyphish.com/) (Image assets)
+*   [Cup Image (icon)]( https://openclipart.org/image/2400px/svg_to_png/169909/kitchen-coffee-cup.png) - (Attribution)
 
 #### Development Websites/Resources
 By no mean exhaustive
@@ -136,5 +137,28 @@ This is a longer video where I go into detail about the current code and impleme
 ### Coding Refactor ###
 Quick video describing the upcoming need to refactor.  Currently, the MapViewController is breaking the [Single Responsiblity principle](http://en.wikipedia.org/wiki/Single_responsibility_principle).  This principle states that a class should do 1 thing (e.g. *view* render a view, *model* only hold model data, etc.).  However the current implementation of the MapViewController does more then orchestrating between its view and model.
 
-[![Coding Overview Part 1 video](http://img.youtube.com/vi/6eciKB30wM4/0.jpg)](http://www.youtube.com/watch?v=6eciKB30wM4)
+[![Code Refactor video](http://img.youtube.com/vi/6eciKB30wM4/0.jpg)](http://www.youtube.com/watch?v=6eciKB30wM4)
 
+### Performance Issue ###
+A quick video on a performance issue I encountered with loading remote images in table cells.  
+
+The problem is with image caching and the way the code is retreiving the images. 
+
+1.  The images are not cached.  Meaning, every time the cellForRow content is request the app has to go the remote server and retreive the image.
+2.  The image is downloaded on the UI thread.
+
+There are a couple of things I could do to fix this issue:
+
+1.  Make the download aynchronious by using `NSOperationQueue`(to spawn background thread to download the images) or `NSURLSession`.  With the images downloaded write them to file or use something like `NSURLCache`.
+2.  Read the images from a cache or file system.
+3.  Use a battle tested library that does 1 and 2.  
+```
+    NSData *imageData = [[NSData alloc] initWithContentsOfURL: [URL URLWithString: model.imageURL]];
+    [cell.image setImage: [UIImage imageWithData: imageData]];
+    
+    NSData *ratingsData = [[NSData alloc] initWithContentsOfURL: [URL URLWithString: model.ratingsData]];
+    [cell.ratingImage setImage: [UIImage imageWithData: imageData]];
+```
+To solve this problem I chose [SD Webimage](https://github.com/rs/SDWebImage).  It is available via CocoaPods.  SD Webimage uses extension to extends UIImage class and provides download (background) and image caching.
+
+[![Performance Issue video](http://img.youtube.com/vi/rHlZk-OvUek/0.jpg)](http://www.youtube.com/watch?v=rHlZk-OvUek)
