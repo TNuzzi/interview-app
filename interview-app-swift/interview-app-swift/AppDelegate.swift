@@ -9,12 +9,16 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, YelpAPIServiceDelegate {
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        var yelp = YelpAPIService()
+        yelp.delegate = self
+        yelp.findNearByCoffeshopsByLocation("San Francisco, CA", aLatitude: 37.767503599999998, andLongitude: -122.41716843477001)
         // Override point for customization after application launch.
         return true
     }
@@ -41,6 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func loadResultWithDataArray(resultArray: [CoffeeshopModel]) {
+        println("\(resultArray[0].name!)")
+    }
 
 }
 
