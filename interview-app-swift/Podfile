@@ -5,6 +5,7 @@ target 'interview-app-swift' do
     pod "SwiftyJSON"
     pod "OAuthConsumer"
     pod 'SDWebImage', '~>3.6'
+    pod 'OAuthSwift', '~>0.3.6'
 end
 
 target 'interview-app-swiftTests' do

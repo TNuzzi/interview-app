@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57D08E7C4376E558C31322B4 /* Pods_interview_app_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4940734ACBB6F64EBA05A464 /* Pods_interview_app_swift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E72DDAE01B097D470081B383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72DDADF1B097D470081B383 /* AppDelegate.swift */; };
-		E72DDAE21B097D470081B383 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72DDAE11B097D470081B383 /* ViewController.swift */; };
 		E72DDAE51B097D470081B383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72DDAE31B097D470081B383 /* Main.storyboard */; };
 		E72DDAE71B097D470081B383 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72DDAE61B097D470081B383 /* Images.xcassets */; };
 		E72DDAEA1B097D470081B383 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72DDAE81B097D470081B383 /* LaunchScreen.xib */; };
 		E72DDAF61B097D470081B383 /* interview_app_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72DDAF51B097D470081B383 /* interview_app_swiftTests.swift */; };
+		E763D2F91B1E548300A64C8E /* CoffeeshopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763D2F81B1E548300A64C8E /* CoffeeshopModel.swift */; };
+		E763D2FB1B1E54E100A64C8E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E763D2FA1B1E54E100A64C8E /* MapKit.framework */; };
+		E763D2FD1B1E54E800A64C8E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E763D2FC1B1E54E800A64C8E /* CoreLocation.framework */; };
+		E763D2FF1B1E561600A64C8E /* YelpAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763D2FE1B1E561600A64C8E /* YelpAPIService.swift */; };
+		E763D3011B1E7A0200A64C8E /* OAuthAPIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763D3001B1E7A0200A64C8E /* OAuthAPIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +31,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4940734ACBB6F64EBA05A464 /* Pods_interview_app_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_interview_app_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77146EBB9620A8BF57CD6779 /* Pods-interview-app-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-app-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-interview-app-swift/Pods-interview-app-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E72DDADA1B097D470081B383 /* interview-app-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interview-app-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72DDADE1B097D470081B383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72DDADF1B097D470081B383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E72DDAE11B097D470081B383 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E72DDAE41B097D470081B383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E72DDAE61B097D470081B383 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E72DDAE91B097D470081B383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E72DDAEF1B097D470081B383 /* interview-app-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interview-app-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72DDAF41B097D470081B383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72DDAF51B097D470081B383 /* interview_app_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_app_swiftTests.swift; sourceTree = "<group>"; };
+		E763D2F81B1E548300A64C8E /* CoffeeshopModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeshopModel.swift; sourceTree = "<group>"; };
+		E763D2FA1B1E54E100A64C8E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E763D2FC1B1E54E800A64C8E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E763D2FE1B1E561600A64C8E /* YelpAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPIService.swift; sourceTree = "<group>"; };
+		E763D3001B1E7A0200A64C8E /* OAuthAPIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthAPIConstants.swift; sourceTree = "<group>"; };
+		F6C92910F1E77C62C3A74ABE /* Pods-interview-app-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-app-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-interview-app-swift/Pods-interview-app-swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E763D2FD1B1E54E800A64C8E /* CoreLocation.framework in Frameworks */,
+				E763D2FB1B1E54E100A64C8E /* MapKit.framework in Frameworks */,
+				57D08E7C4376E558C31322B4 /* Pods_interview_app_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +71,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		753502A0BCCE61B2C47EB271 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4940734ACBB6F64EBA05A464 /* Pods_interview_app_swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		981389F3F16B5E8A7365F9EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77146EBB9620A8BF57CD6779 /* Pods-interview-app-swift.debug.xcconfig */,
+				F6C92910F1E77C62C3A74ABE /* Pods-interview-app-swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E72DDAD11B097D470081B383 = {
 			isa = PBXGroup;
 			children = (
+				E763D2FC1B1E54E800A64C8E /* CoreLocation.framework */,
+				E763D2FA1B1E54E100A64C8E /* MapKit.framework */,
 				E72DDADC1B097D470081B383 /* interview-app-swift */,
 				E72DDAF21B097D470081B383 /* interview-app-swiftTests */,
 				E72DDADB1B097D470081B383 /* Products */,
+				981389F3F16B5E8A7365F9EC /* Pods */,
+				753502A0BCCE61B2C47EB271 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,10 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				E72DDADF1B097D470081B383 /* AppDelegate.swift */,
-				E72DDAE11B097D470081B383 /* ViewController.swift */,
-				E72DDAE31B097D470081B383 /* Main.storyboard */,
-				E72DDAE61B097D470081B383 /* Images.xcassets */,
-				E72DDAE81B097D470081B383 /* LaunchScreen.xib */,
+				E763D2F41B1E4EC100A64C8E /* Model */,
+				E763D2F51B1E4ECA00A64C8E /* View */,
+				E763D2F61B1E4ECF00A64C8E /* Controller */,
+				E763D2F71B1E4ED700A64C8E /* Services */,
 				E72DDADD1B097D470081B383 /* Supporting Files */,
 			);
 			path = "interview-app-swift";
@@ -90,6 +126,8 @@
 		E72DDADD1B097D470081B383 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E72DDAE81B097D470081B383 /* LaunchScreen.xib */,
+				E72DDAE61B097D470081B383 /* Images.xcassets */,
 				E72DDADE1B097D470081B383 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -112,6 +150,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E763D2F41B1E4EC100A64C8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E763D2F81B1E548300A64C8E /* CoffeeshopModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E763D2F51B1E4ECA00A64C8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E72DDAE31B097D470081B383 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E763D2F61B1E4ECF00A64C8E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E763D2F71B1E4ED700A64C8E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E763D3001B1E7A0200A64C8E /* OAuthAPIConstants.swift */,
+				E763D2FE1B1E561600A64C8E /* YelpAPIService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E72DDAF91B097D470081B383 /* Build configuration list for PBXNativeTarget "interview-app-swift" */;
 			buildPhases = (
+				714D17F40F0CE3F7C066F3FA /* Check Pods Manifest.lock */,
 				E72DDAD61B097D470081B383 /* Sources */,
 				E72DDAD71B097D470081B383 /* Frameworks */,
 				E72DDAD81B097D470081B383 /* Resources */,
+				927607BDE9A53650DD042135 /* Embed Pods Frameworks */,
+				4B6B39992C3D36EBF7A436AD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +280,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4B6B39992C3D36EBF7A436AD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-interview-app-swift/Pods-interview-app-swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		714D17F40F0CE3F7C066F3FA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		927607BDE9A53650DD042135 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-interview-app-swift/Pods-interview-app-swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E72DDAD61B097D470081B383 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E72DDAE21B097D470081B383 /* ViewController.swift in Sources */,
 				E72DDAE01B097D470081B383 /* AppDelegate.swift in Sources */,
+				E763D2F91B1E548300A64C8E /* CoffeeshopModel.swift in Sources */,
+				E763D3011B1E7A0200A64C8E /* OAuthAPIConstants.swift in Sources */,
+				E763D2FF1B1E561600A64C8E /* YelpAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +461,7 @@
 		};
 		E72DDAFA1B097D470081B383 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77146EBB9620A8BF57CD6779 /* Pods-interview-app-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "interview-app-swift/Info.plist";
@@ -348,6 +472,7 @@
 		};
 		E72DDAFB1B097D470081B383 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6C92910F1E77C62C3A74ABE /* Pods-interview-app-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "interview-app-swift/Info.plist";
@@ -409,6 +534,7 @@
 				E72DDAFB1B097D470081B383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E72DDAFC1B097D470081B383 /* Build configuration list for PBXNativeTarget "interview-app-swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +543,7 @@
 				E72DDAFE1B097D470081B383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

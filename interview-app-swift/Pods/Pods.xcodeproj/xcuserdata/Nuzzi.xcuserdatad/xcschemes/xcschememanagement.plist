@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-interview-app-swift-OAuthSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-interview-app-swift-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4430526E971E556D8774B5FB</key>
+		<key>073C309E1BD8C0DE24C3E1A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>649ECC323C98951A73A4FF7C</key>
+		<key>11601D3ABC1EEB33F9B1652C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D051C13F2D0063969984147</key>
+		<key>2A15F2FB14B95BBD07BF3390</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E6A8D977457123A9F51B2D3</key>
+		<key>576C3253D9248AF5E5CA09F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F973BC6F89B2F8DEF1B406F3</key>
+		<key>5D59054CFECB62300FECCE8E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69561078BBEEE38C3E9738D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

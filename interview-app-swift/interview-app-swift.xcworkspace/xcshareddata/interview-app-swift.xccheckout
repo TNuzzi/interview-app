@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>03EA669F-F3C6-44C5-9068-7AA297805333</string>
+	<string>93ED8CD1-2734-4E0D-A2E5-CDEEDE2ED02A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>interview-app-swift</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/TNuzzi/interview-app</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>interview-app-swift/interview-app-swift.xcodeproj</string>
+	<string>interview-app-swift/interview-app-swift.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E5538BA92BDDD40EDDABA93374D2E1741851DE73</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/TNuzzi/interview-app</string>
