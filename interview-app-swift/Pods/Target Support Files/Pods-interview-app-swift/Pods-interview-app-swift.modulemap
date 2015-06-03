@@ -1,0 +1,6 @@
+framework module Pods_interview_app_swift {
+  umbrella header "Pods-interview-app-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

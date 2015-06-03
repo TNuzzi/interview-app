@@ -1,0 +1,6 @@
+framework module OAuthConsumer {
+  umbrella header "Pods-interview-app-swift-OAuthConsumer-umbrella.h"
+
+  export *
+  module * { export * }
+}
