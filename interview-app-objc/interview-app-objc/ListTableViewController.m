@@ -59,6 +59,8 @@
     [activityView startAnimating];
 }
 
+#pragma mark - CoffeeShopFinderServiceDelegate
+
 -(void) noCoffeeshopsFoundAtLatitude:(CLLocationDegrees)latitude andLongitude:(CLLocationDegrees)longitude {
     // Clear table to indicate no coffee shops found
     [self.tableView reloadData];
@@ -67,8 +69,6 @@
     [self.navigationItem setRightBarButtonItem:self.refreshButton];
     [self.refreshButton setEnabled:YES];
 }
-
-#pragma mark - CoffeeShopFinderServiceDelegate
 
 - (void)coffeeshopsInMyArea:(NSArray *)resultArray myLatitude:(CLLocationDegrees)latitude
                andLongitude:(CLLocationDegrees)longitude {

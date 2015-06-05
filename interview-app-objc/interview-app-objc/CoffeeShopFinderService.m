@@ -89,7 +89,7 @@
 
 - (void) showSettingAlertDialog {
     // Initialize alert controller
-    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Background Location Access Disabled" message:@"In order to find coffee shops around you, please open this app's settings and set location access to 'Always'." preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Background Location Access Disabled" message:@"In order to find coffee shops around you, please open this app's settings and set location access to 'While Using the App'." preferredStyle:UIAlertControllerStyleAlert];
     
     // Cancel Action button
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
