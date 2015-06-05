@@ -11,14 +11,14 @@
 
 @interface CoffeeshopModel : NSObject
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *address;
-@property (nonatomic, strong) NSString *imageURL;
-@property (nonatomic, strong) NSString *ratingURL;
-@property (nonatomic, strong) NSString *mobileURL;
-@property (nonatomic, strong) NSString *phone;
-@property (nonatomic, strong) NSString *rating;
-@property (nonatomic, strong) NSString *reviewCount;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *address;
+@property (nonatomic, copy) NSString *imageURL;
+@property (nonatomic, copy) NSString *ratingURL;
+@property (nonatomic, copy) NSString *mobileURL;
+@property (nonatomic, copy) NSString *phone;
+@property (nonatomic, copy) NSString *rating;
+@property (nonatomic, copy) NSString *reviewCount;
 
 @property CLLocationDegrees latitude;
 @property CLLocationDegrees longitude;
