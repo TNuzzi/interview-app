@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7cU-h5-RBR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8zE-zA-HpC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -9,7 +9,7 @@
         <!--Café Ahora-->
         <scene sceneID="m1A-lO-Xy8">
             <objects>
-                <viewController id="9ab-vc-h6d" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="9ab-vc-h6d" customClass="MapViewController" customModule="interview_app_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HeU-AG-gpi"/>
                         <viewControllerLayoutGuide type="bottom" id="fx2-mf-vXk"/>
@@ -55,57 +55,19 @@
                     <navigationItem key="navigationItem" title="Café Ahora" id="vdV-IY-QA5">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="wDD-t8-xS5">
                             <connections>
-                                <action selector="refreshTapped:" destination="9ab-vc-h6d" id="dQf-V2-rq5"/>
+                                <action selector="refreshTapped:" destination="9ab-vc-h6d" id="05c-GZ-rDv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="iUJ-P3-RbK" id="ey3-xE-WN0"/>
-                        <outlet property="refreshButton" destination="wDD-t8-xS5" id="L41-wc-3SB"/>
+                        <outlet property="mapView" destination="iUJ-P3-RbK" id="sWL-QR-uoS"/>
+                        <outlet property="refreshButton" destination="wDD-t8-xS5" id="Qoc-1y-WB6"/>
                         <segue destination="hxb-Nh-2sT" kind="show" identifier="details" id="74T-E7-9ab"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MUJ-hI-5OM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3193.5" y="-238.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="goR-8e-G2h">
-            <objects>
-                <viewController id="7cU-h5-RBR" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aU5-7G-sdA"/>
-                        <viewControllerLayoutGuide type="bottom" id="1wH-sa-oEZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ium-ev-qj1">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjK-My-VzB">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="179" y="389" width="59" height="21"/>
-                                </variation>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="rjK-My-VzB"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="rjK-My-VzB"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hst-oO-lwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2335.5" y="-770.25"/>
         </scene>
         <!--Map-->
         <scene sceneID="K68-Bg-UY0">
@@ -130,13 +92,13 @@
         <!--Café Ahora-->
         <scene sceneID="r1Z-6J-IZW">
             <objects>
-                <tableViewController id="eqM-hZ-27d" customClass="ListTableViewController" sceneMemberID="viewController">
+                <tableViewController id="eqM-hZ-27d" customClass="ListTableViewController" customModule="interview_app_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="byP-ap-nf2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="VJQ-GG-nKs" customClass="ListTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="VJQ-GG-nKs" customClass="ListTableViewCell" customModule="interview_app_swift" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VJQ-GG-nKs" id="8Ws-X9-eUK">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -246,10 +208,10 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="image" destination="0ZE-Ix-c4h" id="thu-Sb-bZB"/>
-                                    <outlet property="name" destination="5RG-A9-cCG" id="eSp-mX-jZ0"/>
-                                    <outlet property="numOfReviews" destination="nyP-rf-qHG" id="4d6-GX-Bla"/>
-                                    <outlet property="ratingImage" destination="1K9-c0-7ZB" id="SNW-VK-v6B"/>
+                                    <outlet property="businessImage" destination="0ZE-Ix-c4h" id="MY2-Iv-jw8"/>
+                                    <outlet property="name" destination="5RG-A9-cCG" id="ep4-DX-hd5"/>
+                                    <outlet property="numOfReviews" destination="nyP-rf-qHG" id="I2U-Sh-I3G"/>
+                                    <outlet property="ratingImage" destination="1K9-c0-7ZB" id="Qw7-zH-ag2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -261,12 +223,12 @@
                     <navigationItem key="navigationItem" title="Café Ahora" id="gJS-Mn-6ji">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="OyC-8k-Egm">
                             <connections>
-                                <action selector="refreshTapped:" destination="eqM-hZ-27d" id="Tej-5K-ewW"/>
+                                <action selector="refreshTapped:" destination="eqM-hZ-27d" id="77O-po-tGP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="refreshButton" destination="OyC-8k-Egm" id="7e4-K1-g4M"/>
+                        <outlet property="refreshButton" destination="OyC-8k-Egm" id="Bq3-wR-nCw"/>
                         <segue destination="hxb-Nh-2sT" kind="show" identifier="details" id="J2e-tu-aGy"/>
                     </connections>
                 </tableViewController>
@@ -274,10 +236,10 @@
             </objects>
             <point key="canvasLocation" x="3193.5" y="456"/>
         </scene>
-        <!--Coffeeshop Details View Controller-->
+        <!--Coffeeshop Detail View Controller-->
         <scene sceneID="Sq4-HQ-sUg">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="hxb-Nh-2sT" customClass="CoffeeshopDetailsViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="hxb-Nh-2sT" customClass="CoffeeshopDetailViewController" customModule="interview_app_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oQl-Sb-GLn"/>
                         <viewControllerLayoutGuide type="bottom" id="a8k-p1-yCS"/>
@@ -298,7 +260,7 @@
                                             <constraint firstAttribute="height" constant="70" id="soB-f2-sKU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -382,7 +344,7 @@
                                     <constraint firstAttribute="height" constant="200" id="jAR-tY-B0V"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailsCell" id="IXb-Ak-Khp" customClass="DetailsTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailsCell" id="IXb-Ak-Khp" customClass="DetailsTableViewCell" customModule="interview_app_swift" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IXb-Ak-Khp" id="xpI-OI-epp">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -409,7 +371,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFv-Ih-8zb">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -456,10 +418,10 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="content" destination="eFv-Ih-8zb" id="Q32-MT-PWK"/>
-                                            <outlet property="leftImage" destination="7l5-tH-M6r" id="HS3-6G-C63"/>
+                                            <outlet property="content" destination="eFv-Ih-8zb" id="cvm-7s-llX"/>
+                                            <outlet property="leftImage" destination="7l5-tH-M6r" id="gEj-KM-qXe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -475,8 +437,8 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <outlet property="dataSource" destination="hxb-Nh-2sT" id="mZG-fc-Qkk"/>
-                                    <outlet property="delegate" destination="hxb-Nh-2sT" id="Imr-Sn-FNW"/>
+                                    <outlet property="dataSource" destination="hxb-Nh-2sT" id="eof-0U-nvu"/>
+                                    <outlet property="delegate" destination="hxb-Nh-2sT" id="keG-oL-M5E"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2999 Reviews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmJ-MO-uKN">
@@ -485,7 +447,7 @@
                                     <constraint firstAttribute="height" constant="17" id="Ty6-99-wGu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -520,7 +482,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data provided by Yelp!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P92-eS-n8F">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -528,7 +490,6 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="t5U-JE-unY" secondAttribute="trailing" id="1ZT-U0-nzA"/>
                             <constraint firstItem="C5N-h8-Bxx" firstAttribute="bottom" secondItem="QmJ-MO-uKN" secondAttribute="bottom" id="3gC-yq-9Ga"/>
-                            <constraint firstItem="a8k-p1-yCS" firstAttribute="bottom" secondItem="P92-eS-n8F" secondAttribute="bottom" constant="5" id="A1h-fg-5Oc"/>
                             <constraint firstAttribute="centerX" secondItem="P92-eS-n8F" secondAttribute="centerX" id="Fhf-3w-irh"/>
                             <constraint firstItem="t5U-JE-unY" firstAttribute="top" secondItem="C5N-h8-Bxx" secondAttribute="bottom" constant="20" id="Goe-mb-fjJ"/>
                             <constraint firstAttribute="trailing" secondItem="HGJ-GE-NYF" secondAttribute="trailing" id="Hjk-oX-SmG"/>
@@ -540,6 +501,7 @@
                             <constraint firstItem="HGJ-GE-NYF" firstAttribute="top" secondItem="oQl-Sb-GLn" secondAttribute="bottom" id="dNU-1q-UH0"/>
                             <constraint firstItem="xxa-oi-lei" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="frB-2p-5rW" secondAttribute="leading" constant="18" id="kol-rQ-BBi"/>
                             <constraint firstItem="C5N-h8-Bxx" firstAttribute="leading" secondItem="xxa-oi-lei" secondAttribute="trailing" priority="250" constant="40" id="ms6-mi-3er"/>
+                            <constraint firstItem="a8k-p1-yCS" firstAttribute="bottom" secondItem="P92-eS-n8F" secondAttribute="bottom" constant="5" id="sh4-jd-EKg"/>
                             <constraint firstItem="xxa-oi-lei" firstAttribute="bottom" secondItem="C5N-h8-Bxx" secondAttribute="bottom" id="snK-Gj-hdV"/>
                             <constraint firstItem="HGJ-GE-NYF" firstAttribute="leading" secondItem="frB-2p-5rW" secondAttribute="leading" id="xqt-wW-ATl"/>
                         </constraints>
@@ -556,6 +518,7 @@
                                 <exclude reference="Fhf-3w-irh"/>
                                 <exclude reference="M8u-dH-zg5"/>
                                 <exclude reference="TPz-nw-byP"/>
+                                <exclude reference="sh4-jd-EKg"/>
                                 <exclude reference="3gC-yq-9Ga"/>
                                 <exclude reference="bE3-Jq-V9l"/>
                                 <exclude reference="cb3-DP-p9A"/>
@@ -583,6 +546,7 @@
                                 <include reference="Fhf-3w-irh"/>
                                 <include reference="M8u-dH-zg5"/>
                                 <include reference="TPz-nw-byP"/>
+                                <include reference="sh4-jd-EKg"/>
                                 <include reference="3gC-yq-9Ga"/>
                                 <include reference="bE3-Jq-V9l"/>
                                 <include reference="cb3-DP-p9A"/>
@@ -599,12 +563,12 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="businessImage" destination="C5N-h8-Bxx" id="ykJ-Ts-bFP"/>
-                        <outlet property="mapView" destination="Y6I-Pc-dm0" id="KpU-xS-hyX"/>
-                        <outlet property="name" destination="DhO-bx-rQ8" id="956-Jh-mQL"/>
-                        <outlet property="ratingsImage" destination="xxa-oi-lei" id="wbY-NE-CA2"/>
-                        <outlet property="reviewCount" destination="QmJ-MO-uKN" id="4n2-AP-Bxu"/>
-                        <outlet property="yelpFooter" destination="P92-eS-n8F" id="jHo-Pz-oCq"/>
+                        <outlet property="businessImage" destination="C5N-h8-Bxx" id="Fo5-z4-F8r"/>
+                        <outlet property="mapView" destination="Y6I-Pc-dm0" id="IZG-Mm-5Vo"/>
+                        <outlet property="name" destination="DhO-bx-rQ8" id="3Fi-rU-lez"/>
+                        <outlet property="ratingImage" destination="xxa-oi-lei" id="WCs-YF-c4r"/>
+                        <outlet property="reviewCount" destination="QmJ-MO-uKN" id="kzb-ee-Oox"/>
+                        <outlet property="yelpFooter" destination="P92-eS-n8F" id="Znd-2v-yRD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4Q-E3-U3e" userLabel="First Responder" sceneMemberID="firstResponder"/>

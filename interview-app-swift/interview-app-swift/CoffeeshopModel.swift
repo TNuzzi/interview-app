@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-struct CoffeeshopModel {
+class CoffeeshopModel {
     var name: String?
     var address: String?
     var imageURL: String?

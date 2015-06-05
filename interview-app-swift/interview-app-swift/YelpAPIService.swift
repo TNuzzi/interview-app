@@ -17,18 +17,22 @@ protocol YelpAPIServiceDelegate {
 }
 
 class YelpAPIService: NSObject, NSURLConnectionDataDelegate {
+    // Constants for Yelp API
     let YelpSearchUrl = "http://api.yelp.com/v2/search"
     let SearchResultLimit = "20"
     
     var urlRespondData: NSMutableData?
     var delegate: YelpAPIServiceDelegate?
     
+    // Used to find all the coffee shops in the user geolocated area
     func findNearByCoffeshopsByLocation(location: String, aLatitude latitude: CLLocationDegrees, andLongitude longitude: CLLocationDegrees) {
         
+        // Setup Yelp API URL
         let urlString = String("\(self.YelpSearchUrl)?term=coffee&location=\(location)&cll=\(latitude),\(longitude)&limit=\(self.SearchResultLimit)&sort=1").stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         
         let url = NSURL(string: urlString)
         
+        // Setup OAuth consumer class
         let consumer = OAConsumer(key: OAuthAPIConstants.OAuthConsumerKey,
                                   secret: OAuthAPIConstants.OAuthConsumerSecret)
         let token = OAToken(key: OAuthAPIConstants.OAuthToken,
@@ -38,6 +42,7 @@ class YelpAPIService: NSObject, NSURLConnectionDataDelegate {
         
         request.prepare()
         
+        // Prepare url connection to reveive data
         if let conn = NSURLConnection(request: request, delegate: self) {
             self.urlRespondData = NSMutableData()
         }
@@ -76,10 +81,13 @@ class YelpAPIService: NSObject, NSURLConnectionDataDelegate {
         let resultJSON = JSON(data: NSData(data: self.urlRespondData!))
         
         if resultJSON != nil {
+            // Get all the business from yelp results
             let businesses = resultJSON["businesses"]
             
+            var coffeeshops: [CoffeeshopModel] = []
+            
+            // Check for business and iterate through them
             if businesses.count > 0 {
-                var coffeeshops: [CoffeeshopModel] = []
                 
                 // Iterate through the JSON results and create CoffeeshopModel from each business
                 /* Consdensed version
@@ -100,7 +108,6 @@ class YelpAPIService: NSObject, NSURLConnectionDataDelegate {
                     }
                 }
                 */
-                
                 for (index: String, coffeeshop: JSON) in businesses {
                     var model = CoffeeshopModel()
                     model.name = coffeeshop["name"].stringValue
@@ -109,7 +116,7 @@ class YelpAPIService: NSObject, NSURLConnectionDataDelegate {
                     model.mobileURL = coffeeshop["mobile_url"].stringValue
                     model.rating = coffeeshop["rating"].stringValue
                     model.reviewCount = coffeeshop["review_count"].stringValue
-                    model.phone = coffeeshop["location"]["display_phone"].stringValue
+                    model.phone = coffeeshop["display_phone"].stringValue
                     model.address = join(", ", coffeeshop["location"]["display_address"].arrayObject as! [String])
                     
                     model.latitude = coffeeshop["location"]["coordinate"]["latitude"].doubleValue
@@ -117,9 +124,10 @@ class YelpAPIService: NSObject, NSURLConnectionDataDelegate {
                     
                     coffeeshops.append(model)
                 }
-                
-                self.delegate?.loadResultWithDataArray(coffeeshops);
             }
+            
+            // Notify delegate
+            self.delegate?.loadResultWithDataArray(coffeeshops);
         }
     }
 }

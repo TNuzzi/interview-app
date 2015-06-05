@@ -11,13 +11,22 @@
 		E72DDAE01B097D470081B383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72DDADF1B097D470081B383 /* AppDelegate.swift */; };
 		E72DDAE51B097D470081B383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72DDAE31B097D470081B383 /* Main.storyboard */; };
 		E72DDAE71B097D470081B383 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72DDAE61B097D470081B383 /* Images.xcassets */; };
-		E72DDAEA1B097D470081B383 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72DDAE81B097D470081B383 /* LaunchScreen.xib */; };
 		E72DDAF61B097D470081B383 /* interview_app_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72DDAF51B097D470081B383 /* interview_app_swiftTests.swift */; };
 		E763D2F91B1E548300A64C8E /* CoffeeshopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763D2F81B1E548300A64C8E /* CoffeeshopModel.swift */; };
 		E763D2FB1B1E54E100A64C8E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E763D2FA1B1E54E100A64C8E /* MapKit.framework */; };
 		E763D2FD1B1E54E800A64C8E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E763D2FC1B1E54E800A64C8E /* CoreLocation.framework */; };
 		E763D2FF1B1E561600A64C8E /* YelpAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763D2FE1B1E561600A64C8E /* YelpAPIService.swift */; };
 		E763D3011B1E7A0200A64C8E /* OAuthAPIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763D3001B1E7A0200A64C8E /* OAuthAPIConstants.swift */; };
+		E763D3031B1EA39300A64C8E /* CoffeeShopFinderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763D3021B1EA39300A64C8E /* CoffeeShopFinderService.swift */; };
+		E763D3051B1F7AEE00A64C8E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E763D3041B1F7AEE00A64C8E /* AddressBook.framework */; };
+		E77F833C1B20D78000A1C99F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F833B1B20D78000A1C99F /* UIImageExtension.swift */; };
+		E77F83401B20D9B900A1C99F /* CoffeeShopPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F833F1B20D9B900A1C99F /* CoffeeShopPointAnnotation.swift */; };
+		E77F83421B20DA0300A1C99F /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F83411B20DA0300A1C99F /* DetailsTableViewCell.swift */; };
+		E77F83441B20DAC700A1C99F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F83431B20DAC700A1C99F /* MapViewController.swift */; };
+		E77F83461B20DAE600A1C99F /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F83451B20DAE600A1C99F /* ListTableViewController.swift */; };
+		E77F83481B20DB1300A1C99F /* CoffeeshopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F83471B20DB1300A1C99F /* CoffeeshopDetailViewController.swift */; };
+		E77F834A1B20EEE800A1C99F /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F83491B20EEE800A1C99F /* ListTableViewCell.swift */; };
+		E7822E8F1B21424500586E89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7822E8E1B21424500586E89 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +47,6 @@
 		E72DDADF1B097D470081B383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E72DDAE41B097D470081B383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E72DDAE61B097D470081B383 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E72DDAE91B097D470081B383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E72DDAEF1B097D470081B383 /* interview-app-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "interview-app-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72DDAF41B097D470081B383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72DDAF51B097D470081B383 /* interview_app_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interview_app_swiftTests.swift; sourceTree = "<group>"; };
@@ -47,6 +55,16 @@
 		E763D2FC1B1E54E800A64C8E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E763D2FE1B1E561600A64C8E /* YelpAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPIService.swift; sourceTree = "<group>"; };
 		E763D3001B1E7A0200A64C8E /* OAuthAPIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthAPIConstants.swift; sourceTree = "<group>"; };
+		E763D3021B1EA39300A64C8E /* CoffeeShopFinderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopFinderService.swift; sourceTree = "<group>"; };
+		E763D3041B1F7AEE00A64C8E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		E77F833B1B20D78000A1C99F /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		E77F833F1B20D9B900A1C99F /* CoffeeShopPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopPointAnnotation.swift; sourceTree = "<group>"; };
+		E77F83411B20DA0300A1C99F /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
+		E77F83431B20DAC700A1C99F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E77F83451B20DAE600A1C99F /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		E77F83471B20DB1300A1C99F /* CoffeeshopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeshopDetailViewController.swift; sourceTree = "<group>"; };
+		E77F83491B20EEE800A1C99F /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		E7822E8E1B21424500586E89 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		F6C92910F1E77C62C3A74ABE /* Pods-interview-app-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-interview-app-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-interview-app-swift/Pods-interview-app-swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E763D3051B1F7AEE00A64C8E /* AddressBook.framework in Frameworks */,
 				E763D2FD1B1E54E800A64C8E /* CoreLocation.framework in Frameworks */,
 				E763D2FB1B1E54E100A64C8E /* MapKit.framework in Frameworks */,
 				57D08E7C4376E558C31322B4 /* Pods_interview_app_swift.framework in Frameworks */,
@@ -74,6 +93,7 @@
 		753502A0BCCE61B2C47EB271 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E763D3041B1F7AEE00A64C8E /* AddressBook.framework */,
 				4940734ACBB6F64EBA05A464 /* Pods_interview_app_swift.framework */,
 			);
 			name = Frameworks;
@@ -117,6 +137,7 @@
 				E763D2F41B1E4EC100A64C8E /* Model */,
 				E763D2F51B1E4ECA00A64C8E /* View */,
 				E763D2F61B1E4ECF00A64C8E /* Controller */,
+				E77F833A1B20D76700A1C99F /* Extensions */,
 				E763D2F71B1E4ED700A64C8E /* Services */,
 				E72DDADD1B097D470081B383 /* Supporting Files */,
 			);
@@ -126,7 +147,7 @@
 		E72DDADD1B097D470081B383 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E72DDAE81B097D470081B383 /* LaunchScreen.xib */,
+				E7822E8E1B21424500586E89 /* LaunchScreen.xib */,
 				E72DDAE61B097D470081B383 /* Images.xcassets */,
 				E72DDADE1B097D470081B383 /* Info.plist */,
 			);
@@ -162,6 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				E72DDAE31B097D470081B383 /* Main.storyboard */,
+				E77F833F1B20D9B900A1C99F /* CoffeeShopPointAnnotation.swift */,
+				E77F83411B20DA0300A1C99F /* DetailsTableViewCell.swift */,
+				E77F83491B20EEE800A1C99F /* ListTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -169,6 +193,9 @@
 		E763D2F61B1E4ECF00A64C8E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E77F83431B20DAC700A1C99F /* MapViewController.swift */,
+				E77F83451B20DAE600A1C99F /* ListTableViewController.swift */,
+				E77F83471B20DB1300A1C99F /* CoffeeshopDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -178,8 +205,17 @@
 			children = (
 				E763D3001B1E7A0200A64C8E /* OAuthAPIConstants.swift */,
 				E763D2FE1B1E561600A64C8E /* YelpAPIService.swift */,
+				E763D3021B1EA39300A64C8E /* CoffeeShopFinderService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		E77F833A1B20D76700A1C99F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E77F833B1B20D78000A1C99F /* UIImageExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +270,7 @@
 				TargetAttributes = {
 					E72DDAD91B097D470081B383 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = V67SX9S67X;
 					};
 					E72DDAEE1B097D470081B383 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -266,7 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E72DDAE51B097D470081B383 /* Main.storyboard in Resources */,
-				E72DDAEA1B097D470081B383 /* LaunchScreen.xib in Resources */,
+				E7822E8F1B21424500586E89 /* LaunchScreen.xib in Resources */,
 				E72DDAE71B097D470081B383 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +373,15 @@
 				E72DDAE01B097D470081B383 /* AppDelegate.swift in Sources */,
 				E763D2F91B1E548300A64C8E /* CoffeeshopModel.swift in Sources */,
 				E763D3011B1E7A0200A64C8E /* OAuthAPIConstants.swift in Sources */,
+				E77F83461B20DAE600A1C99F /* ListTableViewController.swift in Sources */,
+				E763D3031B1EA39300A64C8E /* CoffeeShopFinderService.swift in Sources */,
+				E77F834A1B20EEE800A1C99F /* ListTableViewCell.swift in Sources */,
+				E77F83441B20DAC700A1C99F /* MapViewController.swift in Sources */,
+				E77F83481B20DB1300A1C99F /* CoffeeshopDetailViewController.swift in Sources */,
+				E77F83401B20D9B900A1C99F /* CoffeeShopPointAnnotation.swift in Sources */,
 				E763D2FF1B1E561600A64C8E /* YelpAPIService.swift in Sources */,
+				E77F83421B20DA0300A1C99F /* DetailsTableViewCell.swift in Sources */,
+				E77F833C1B20D78000A1C99F /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,14 +410,6 @@
 				E72DDAE41B097D470081B383 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E72DDAE81B097D470081B383 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E72DDAE91B097D470081B383 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -464,6 +501,7 @@
 			baseConfigurationReference = 77146EBB9620A8BF57CD6779 /* Pods-interview-app-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "interview-app-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -475,6 +513,7 @@
 			baseConfigurationReference = F6C92910F1E77C62C3A74ABE /* Pods-interview-app-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "interview-app-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
